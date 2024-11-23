@@ -1,0 +1,1749 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
+
+// DATE "11/23/2024 22:11:05"
+
+// 
+// Device: Altera 5M40ZE64C4 Package EQFP64
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module router_synchronizer (
+	detect_addr,
+	data_in,
+	write_enb_reg,
+	clk,
+	resetn,
+	read_enb_0,
+	read_enb_1,
+	read_enb_2,
+	empty_0,
+	empty_1,
+	empty_2,
+	full_0,
+	full_1,
+	full_2,
+	vld_out_0,
+	vld_out_1,
+	vld_out_2,
+	write_enb,
+	soft_reset_0,
+	soft_reset_1,
+	soft_reset_2,
+	fifo_full);
+input 	detect_addr;
+input 	[1:0] data_in;
+input 	write_enb_reg;
+input 	clk;
+input 	resetn;
+input 	read_enb_0;
+input 	read_enb_1;
+input 	read_enb_2;
+input 	empty_0;
+input 	empty_1;
+input 	empty_2;
+input 	full_0;
+input 	full_1;
+input 	full_2;
+output 	vld_out_0;
+output 	vld_out_1;
+output 	vld_out_2;
+output 	[2:0] write_enb;
+output 	soft_reset_0;
+output 	soft_reset_1;
+output 	soft_reset_2;
+output 	fifo_full;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \empty_0~combout ;
+wire \empty_1~combout ;
+wire \empty_2~combout ;
+wire \clk~combout ;
+wire \resetn~combout ;
+wire \detect_addr~combout ;
+wire \fifo_addr[1]~1_combout ;
+wire \write_enb_reg~combout ;
+wire \write_enb~0_combout ;
+wire \write_enb~1_combout ;
+wire \write_enb~2_combout ;
+wire \read_enb_0~combout ;
+wire \fifo_0_counter_sft[4]~10_combout ;
+wire \~GND~combout ;
+wire \fifo_0_counter_sft[0]~1 ;
+wire \fifo_0_counter_sft[0]~1COUT1_13 ;
+wire \fifo_0_counter_sft[1]~3 ;
+wire \fifo_0_counter_sft[1]~3COUT1_14 ;
+wire \fifo_0_counter_sft[2]~5 ;
+wire \fifo_0_counter_sft[2]~5COUT1_15 ;
+wire \Equal0~0_combout ;
+wire \fifo_0_counter_sft[4]~11_combout ;
+wire \fifo_0_counter_sft[3]~7 ;
+wire \fifo_0_counter_sft[3]~7COUT1_16 ;
+wire \soft_reset_0~reg0_regout ;
+wire \read_enb_1~combout ;
+wire \fifo_1_counter_sft[4]~10_combout ;
+wire \fifo_1_counter_sft[0]~1 ;
+wire \fifo_1_counter_sft[0]~1COUT1_13 ;
+wire \fifo_1_counter_sft[1]~3 ;
+wire \fifo_1_counter_sft[1]~3COUT1_14 ;
+wire \fifo_1_counter_sft[2]~5 ;
+wire \fifo_1_counter_sft[2]~5COUT1_15 ;
+wire \Equal1~0_combout ;
+wire \fifo_1_counter_sft[4]~11_combout ;
+wire \fifo_1_counter_sft[3]~7 ;
+wire \fifo_1_counter_sft[3]~7COUT1_16 ;
+wire \soft_reset_1~reg0_regout ;
+wire \read_enb_2~combout ;
+wire \fifo_2_counter_sft[4]~10_combout ;
+wire \fifo_2_counter_sft[0]~1 ;
+wire \fifo_2_counter_sft[0]~1COUT1_13 ;
+wire \fifo_2_counter_sft[1]~3 ;
+wire \fifo_2_counter_sft[1]~3COUT1_14 ;
+wire \fifo_2_counter_sft[2]~5 ;
+wire \fifo_2_counter_sft[2]~5COUT1_15 ;
+wire \Equal2~0_combout ;
+wire \fifo_2_counter_sft[4]~11_combout ;
+wire \fifo_2_counter_sft[3]~7 ;
+wire \fifo_2_counter_sft[3]~7COUT1_16 ;
+wire \soft_reset_2~reg0_regout ;
+wire \full_2~combout ;
+wire \full_0~combout ;
+wire \full_1~combout ;
+wire \Mux0~0_combout ;
+wire \Mux0~1_combout ;
+wire [1:0] fifo_addr;
+wire [1:0] \data_in~combout ;
+wire [4:0] fifo_0_counter_sft;
+wire [4:0] fifo_1_counter_sft;
+wire [4:0] fifo_2_counter_sft;
+
+
+// Location: PIN_3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \empty_0~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\empty_0~combout ),
+	.padio(empty_0));
+// synopsys translate_off
+defparam \empty_0~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \empty_1~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\empty_1~combout ),
+	.padio(empty_1));
+// synopsys translate_off
+defparam \empty_1~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_25,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \empty_2~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\empty_2~combout ),
+	.padio(empty_2));
+// synopsys translate_off
+defparam \empty_2~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \clk~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\clk~combout ),
+	.padio(clk));
+// synopsys translate_off
+defparam \clk~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \resetn~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\resetn~combout ),
+	.padio(resetn));
+// synopsys translate_off
+defparam \resetn~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_54,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \data_in[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\data_in~combout [1]),
+	.padio(data_in[1]));
+// synopsys translate_off
+defparam \data_in[1]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \detect_addr~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\detect_addr~combout ),
+	.padio(detect_addr));
+// synopsys translate_off
+defparam \detect_addr~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N7
+maxv_lcell \fifo_addr[1]~1 (
+// Equation(s):
+// \fifo_addr[1]~1_combout  = (((\detect_addr~combout ) # (!\resetn~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\resetn~combout ),
+	.datad(\detect_addr~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\fifo_addr[1]~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_addr[1]~1 .lut_mask = "ff0f";
+defparam \fifo_addr[1]~1 .operation_mode = "normal";
+defparam \fifo_addr[1]~1 .output_mode = "comb_only";
+defparam \fifo_addr[1]~1 .register_cascade_mode = "off";
+defparam \fifo_addr[1]~1 .sum_lutc_input = "datac";
+defparam \fifo_addr[1]~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N9
+maxv_lcell \fifo_addr[1] (
+// Equation(s):
+// fifo_addr[1] = DFFEAS((((\resetn~combout  & \data_in~combout [1]))), GLOBAL(\clk~combout ), VCC, , \fifo_addr[1]~1_combout , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\resetn~combout ),
+	.datad(\data_in~combout [1]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\fifo_addr[1]~1_combout ),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_addr[1]),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_addr[1] .lut_mask = "f000";
+defparam \fifo_addr[1] .operation_mode = "normal";
+defparam \fifo_addr[1] .output_mode = "reg_only";
+defparam \fifo_addr[1] .register_cascade_mode = "off";
+defparam \fifo_addr[1] .sum_lutc_input = "datac";
+defparam \fifo_addr[1] .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_63,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \write_enb_reg~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\write_enb_reg~combout ),
+	.padio(write_enb_reg));
+// synopsys translate_off
+defparam \write_enb_reg~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_60,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \data_in[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\data_in~combout [0]),
+	.padio(data_in[0]));
+// synopsys translate_off
+defparam \data_in[0]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N8
+maxv_lcell \fifo_addr[0] (
+// Equation(s):
+// fifo_addr[0] = DFFEAS((((\resetn~combout  & \data_in~combout [0]))), GLOBAL(\clk~combout ), VCC, , \fifo_addr[1]~1_combout , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\resetn~combout ),
+	.datad(\data_in~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\fifo_addr[1]~1_combout ),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_addr[0]),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_addr[0] .lut_mask = "f000";
+defparam \fifo_addr[0] .operation_mode = "normal";
+defparam \fifo_addr[0] .output_mode = "reg_only";
+defparam \fifo_addr[0] .register_cascade_mode = "off";
+defparam \fifo_addr[0] .sum_lutc_input = "datac";
+defparam \fifo_addr[0] .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N4
+maxv_lcell \write_enb~0 (
+// Equation(s):
+// \write_enb~0_combout  = ((!fifo_addr[1] & (\write_enb_reg~combout  & !fifo_addr[0])))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(fifo_addr[1]),
+	.datac(\write_enb_reg~combout ),
+	.datad(fifo_addr[0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\write_enb~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \write_enb~0 .lut_mask = "0030";
+defparam \write_enb~0 .operation_mode = "normal";
+defparam \write_enb~0 .output_mode = "comb_only";
+defparam \write_enb~0 .register_cascade_mode = "off";
+defparam \write_enb~0 .sum_lutc_input = "datac";
+defparam \write_enb~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N6
+maxv_lcell \write_enb~1 (
+// Equation(s):
+// \write_enb~1_combout  = ((!fifo_addr[1] & (\write_enb_reg~combout  & fifo_addr[0])))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(fifo_addr[1]),
+	.datac(\write_enb_reg~combout ),
+	.datad(fifo_addr[0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\write_enb~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \write_enb~1 .lut_mask = "3000";
+defparam \write_enb~1 .operation_mode = "normal";
+defparam \write_enb~1 .output_mode = "comb_only";
+defparam \write_enb~1 .register_cascade_mode = "off";
+defparam \write_enb~1 .sum_lutc_input = "datac";
+defparam \write_enb~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N2
+maxv_lcell \write_enb~2 (
+// Equation(s):
+// \write_enb~2_combout  = ((fifo_addr[1] & (\write_enb_reg~combout  & !fifo_addr[0])))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(fifo_addr[1]),
+	.datac(\write_enb_reg~combout ),
+	.datad(fifo_addr[0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\write_enb~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \write_enb~2 .lut_mask = "00c0";
+defparam \write_enb~2 .operation_mode = "normal";
+defparam \write_enb~2 .output_mode = "comb_only";
+defparam \write_enb~2 .register_cascade_mode = "off";
+defparam \write_enb~2 .sum_lutc_input = "datac";
+defparam \write_enb~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \read_enb_0~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\read_enb_0~combout ),
+	.padio(read_enb_0));
+// synopsys translate_off
+defparam \read_enb_0~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N7
+maxv_lcell \fifo_0_counter_sft[4]~10 (
+// Equation(s):
+// \fifo_0_counter_sft[4]~10_combout  = (\resetn~combout  & (!\empty_0~combout  & ((!\read_enb_0~combout ))))
+
+	.clk(gnd),
+	.dataa(\resetn~combout ),
+	.datab(\empty_0~combout ),
+	.datac(vcc),
+	.datad(\read_enb_0~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\fifo_0_counter_sft[4]~10_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_0_counter_sft[4]~10 .lut_mask = "0022";
+defparam \fifo_0_counter_sft[4]~10 .operation_mode = "normal";
+defparam \fifo_0_counter_sft[4]~10 .output_mode = "comb_only";
+defparam \fifo_0_counter_sft[4]~10 .register_cascade_mode = "off";
+defparam \fifo_0_counter_sft[4]~10 .sum_lutc_input = "datac";
+defparam \fifo_0_counter_sft[4]~10 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N4
+maxv_lcell \~GND (
+// Equation(s):
+// \~GND~combout  = GND
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\~GND~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \~GND .lut_mask = "0000";
+defparam \~GND .operation_mode = "normal";
+defparam \~GND .output_mode = "comb_only";
+defparam \~GND .register_cascade_mode = "off";
+defparam \~GND .sum_lutc_input = "datac";
+defparam \~GND .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N0
+maxv_lcell \fifo_0_counter_sft[0] (
+// Equation(s):
+// fifo_0_counter_sft[0] = DFFEAS(((!fifo_0_counter_sft[0])), GLOBAL(\clk~combout ), VCC, , , VCC, , , \fifo_0_counter_sft[4]~11_combout )
+// \fifo_0_counter_sft[0]~1  = CARRY(((fifo_0_counter_sft[0])))
+// \fifo_0_counter_sft[0]~1COUT1_13  = CARRY(((fifo_0_counter_sft[0])))
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_0_counter_sft[0]),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_0_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_0_counter_sft[0]),
+	.cout(),
+	.cout0(\fifo_0_counter_sft[0]~1 ),
+	.cout1(\fifo_0_counter_sft[0]~1COUT1_13 ));
+// synopsys translate_off
+defparam \fifo_0_counter_sft[0] .lut_mask = "33cc";
+defparam \fifo_0_counter_sft[0] .operation_mode = "arithmetic";
+defparam \fifo_0_counter_sft[0] .output_mode = "reg_only";
+defparam \fifo_0_counter_sft[0] .register_cascade_mode = "off";
+defparam \fifo_0_counter_sft[0] .sum_lutc_input = "datac";
+defparam \fifo_0_counter_sft[0] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N1
+maxv_lcell \fifo_0_counter_sft[1] (
+// Equation(s):
+// fifo_0_counter_sft[1] = DFFEAS((fifo_0_counter_sft[1] $ ((\fifo_0_counter_sft[0]~1 ))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_0_counter_sft[4]~11_combout )
+// \fifo_0_counter_sft[1]~3  = CARRY(((!\fifo_0_counter_sft[0]~1 ) # (!fifo_0_counter_sft[1])))
+// \fifo_0_counter_sft[1]~3COUT1_14  = CARRY(((!\fifo_0_counter_sft[0]~1COUT1_13 ) # (!fifo_0_counter_sft[1])))
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_0_counter_sft[1]),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_0_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_0_counter_sft[0]~1 ),
+	.cin1(\fifo_0_counter_sft[0]~1COUT1_13 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_0_counter_sft[1]),
+	.cout(),
+	.cout0(\fifo_0_counter_sft[1]~3 ),
+	.cout1(\fifo_0_counter_sft[1]~3COUT1_14 ));
+// synopsys translate_off
+defparam \fifo_0_counter_sft[1] .cin0_used = "true";
+defparam \fifo_0_counter_sft[1] .cin1_used = "true";
+defparam \fifo_0_counter_sft[1] .lut_mask = "3c3f";
+defparam \fifo_0_counter_sft[1] .operation_mode = "arithmetic";
+defparam \fifo_0_counter_sft[1] .output_mode = "reg_only";
+defparam \fifo_0_counter_sft[1] .register_cascade_mode = "off";
+defparam \fifo_0_counter_sft[1] .sum_lutc_input = "cin";
+defparam \fifo_0_counter_sft[1] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N2
+maxv_lcell \fifo_0_counter_sft[2] (
+// Equation(s):
+// fifo_0_counter_sft[2] = DFFEAS((fifo_0_counter_sft[2] $ ((!\fifo_0_counter_sft[1]~3 ))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_0_counter_sft[4]~11_combout )
+// \fifo_0_counter_sft[2]~5  = CARRY(((fifo_0_counter_sft[2] & !\fifo_0_counter_sft[1]~3 )))
+// \fifo_0_counter_sft[2]~5COUT1_15  = CARRY(((fifo_0_counter_sft[2] & !\fifo_0_counter_sft[1]~3COUT1_14 )))
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_0_counter_sft[2]),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_0_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_0_counter_sft[1]~3 ),
+	.cin1(\fifo_0_counter_sft[1]~3COUT1_14 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_0_counter_sft[2]),
+	.cout(),
+	.cout0(\fifo_0_counter_sft[2]~5 ),
+	.cout1(\fifo_0_counter_sft[2]~5COUT1_15 ));
+// synopsys translate_off
+defparam \fifo_0_counter_sft[2] .cin0_used = "true";
+defparam \fifo_0_counter_sft[2] .cin1_used = "true";
+defparam \fifo_0_counter_sft[2] .lut_mask = "c30c";
+defparam \fifo_0_counter_sft[2] .operation_mode = "arithmetic";
+defparam \fifo_0_counter_sft[2] .output_mode = "reg_only";
+defparam \fifo_0_counter_sft[2] .register_cascade_mode = "off";
+defparam \fifo_0_counter_sft[2] .sum_lutc_input = "cin";
+defparam \fifo_0_counter_sft[2] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N3
+maxv_lcell \fifo_0_counter_sft[3] (
+// Equation(s):
+// fifo_0_counter_sft[3] = DFFEAS(fifo_0_counter_sft[3] $ ((((\fifo_0_counter_sft[2]~5 )))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_0_counter_sft[4]~11_combout )
+// \fifo_0_counter_sft[3]~7  = CARRY(((!\fifo_0_counter_sft[2]~5 )) # (!fifo_0_counter_sft[3]))
+// \fifo_0_counter_sft[3]~7COUT1_16  = CARRY(((!\fifo_0_counter_sft[2]~5COUT1_15 )) # (!fifo_0_counter_sft[3]))
+
+	.clk(\clk~combout ),
+	.dataa(fifo_0_counter_sft[3]),
+	.datab(vcc),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_0_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_0_counter_sft[2]~5 ),
+	.cin1(\fifo_0_counter_sft[2]~5COUT1_15 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_0_counter_sft[3]),
+	.cout(),
+	.cout0(\fifo_0_counter_sft[3]~7 ),
+	.cout1(\fifo_0_counter_sft[3]~7COUT1_16 ));
+// synopsys translate_off
+defparam \fifo_0_counter_sft[3] .cin0_used = "true";
+defparam \fifo_0_counter_sft[3] .cin1_used = "true";
+defparam \fifo_0_counter_sft[3] .lut_mask = "5a5f";
+defparam \fifo_0_counter_sft[3] .operation_mode = "arithmetic";
+defparam \fifo_0_counter_sft[3] .output_mode = "reg_only";
+defparam \fifo_0_counter_sft[3] .register_cascade_mode = "off";
+defparam \fifo_0_counter_sft[3] .sum_lutc_input = "cin";
+defparam \fifo_0_counter_sft[3] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N8
+maxv_lcell \Equal0~0 (
+// Equation(s):
+// \Equal0~0_combout  = (((fifo_0_counter_sft[0]) # (!fifo_0_counter_sft[2])) # (!fifo_0_counter_sft[1])) # (!fifo_0_counter_sft[3])
+
+	.clk(gnd),
+	.dataa(fifo_0_counter_sft[3]),
+	.datab(fifo_0_counter_sft[1]),
+	.datac(fifo_0_counter_sft[0]),
+	.datad(fifo_0_counter_sft[2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\Equal0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Equal0~0 .lut_mask = "f7ff";
+defparam \Equal0~0 .operation_mode = "normal";
+defparam \Equal0~0 .output_mode = "comb_only";
+defparam \Equal0~0 .register_cascade_mode = "off";
+defparam \Equal0~0 .sum_lutc_input = "datac";
+defparam \Equal0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N5
+maxv_lcell \fifo_0_counter_sft[4]~11 (
+// Equation(s):
+// \fifo_0_counter_sft[4]~11_combout  = (((fifo_0_counter_sft[4] & !\Equal0~0_combout )) # (!\fifo_0_counter_sft[4]~10_combout ))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\fifo_0_counter_sft[4]~10_combout ),
+	.datac(fifo_0_counter_sft[4]),
+	.datad(\Equal0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\fifo_0_counter_sft[4]~11_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_0_counter_sft[4]~11 .lut_mask = "33f3";
+defparam \fifo_0_counter_sft[4]~11 .operation_mode = "normal";
+defparam \fifo_0_counter_sft[4]~11 .output_mode = "comb_only";
+defparam \fifo_0_counter_sft[4]~11 .register_cascade_mode = "off";
+defparam \fifo_0_counter_sft[4]~11 .sum_lutc_input = "datac";
+defparam \fifo_0_counter_sft[4]~11 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N4
+maxv_lcell \fifo_0_counter_sft[4] (
+// Equation(s):
+// fifo_0_counter_sft[4] = DFFEAS(fifo_0_counter_sft[4] $ ((((!\fifo_0_counter_sft[3]~7 )))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_0_counter_sft[4]~11_combout )
+
+	.clk(\clk~combout ),
+	.dataa(fifo_0_counter_sft[4]),
+	.datab(vcc),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_0_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_0_counter_sft[3]~7 ),
+	.cin1(\fifo_0_counter_sft[3]~7COUT1_16 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_0_counter_sft[4]),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_0_counter_sft[4] .cin0_used = "true";
+defparam \fifo_0_counter_sft[4] .cin1_used = "true";
+defparam \fifo_0_counter_sft[4] .lut_mask = "a5a5";
+defparam \fifo_0_counter_sft[4] .operation_mode = "normal";
+defparam \fifo_0_counter_sft[4] .output_mode = "reg_only";
+defparam \fifo_0_counter_sft[4] .register_cascade_mode = "off";
+defparam \fifo_0_counter_sft[4] .sum_lutc_input = "cin";
+defparam \fifo_0_counter_sft[4] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N9
+maxv_lcell \soft_reset_0~reg0 (
+// Equation(s):
+// \soft_reset_0~reg0_regout  = DFFEAS(((\fifo_0_counter_sft[4]~10_combout  & (fifo_0_counter_sft[4] & !\Equal0~0_combout ))), GLOBAL(\clk~combout ), VCC, , , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(\fifo_0_counter_sft[4]~10_combout ),
+	.datac(fifo_0_counter_sft[4]),
+	.datad(\Equal0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\soft_reset_0~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \soft_reset_0~reg0 .lut_mask = "00c0";
+defparam \soft_reset_0~reg0 .operation_mode = "normal";
+defparam \soft_reset_0~reg0 .output_mode = "reg_only";
+defparam \soft_reset_0~reg0 .register_cascade_mode = "off";
+defparam \soft_reset_0~reg0 .sum_lutc_input = "datac";
+defparam \soft_reset_0~reg0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \read_enb_1~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\read_enb_1~combout ),
+	.padio(read_enb_1));
+// synopsys translate_off
+defparam \read_enb_1~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N7
+maxv_lcell \fifo_1_counter_sft[4]~10 (
+// Equation(s):
+// \fifo_1_counter_sft[4]~10_combout  = ((!\read_enb_1~combout  & (\resetn~combout  & !\empty_1~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\read_enb_1~combout ),
+	.datac(\resetn~combout ),
+	.datad(\empty_1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\fifo_1_counter_sft[4]~10_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_1_counter_sft[4]~10 .lut_mask = "0030";
+defparam \fifo_1_counter_sft[4]~10 .operation_mode = "normal";
+defparam \fifo_1_counter_sft[4]~10 .output_mode = "comb_only";
+defparam \fifo_1_counter_sft[4]~10 .register_cascade_mode = "off";
+defparam \fifo_1_counter_sft[4]~10 .sum_lutc_input = "datac";
+defparam \fifo_1_counter_sft[4]~10 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N0
+maxv_lcell \fifo_1_counter_sft[0] (
+// Equation(s):
+// fifo_1_counter_sft[0] = DFFEAS(((!fifo_1_counter_sft[0])), GLOBAL(\clk~combout ), VCC, , , VCC, , , \fifo_1_counter_sft[4]~11_combout )
+// \fifo_1_counter_sft[0]~1  = CARRY(((fifo_1_counter_sft[0])))
+// \fifo_1_counter_sft[0]~1COUT1_13  = CARRY(((fifo_1_counter_sft[0])))
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_1_counter_sft[0]),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_1_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_1_counter_sft[0]),
+	.cout(),
+	.cout0(\fifo_1_counter_sft[0]~1 ),
+	.cout1(\fifo_1_counter_sft[0]~1COUT1_13 ));
+// synopsys translate_off
+defparam \fifo_1_counter_sft[0] .lut_mask = "33cc";
+defparam \fifo_1_counter_sft[0] .operation_mode = "arithmetic";
+defparam \fifo_1_counter_sft[0] .output_mode = "reg_only";
+defparam \fifo_1_counter_sft[0] .register_cascade_mode = "off";
+defparam \fifo_1_counter_sft[0] .sum_lutc_input = "datac";
+defparam \fifo_1_counter_sft[0] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N1
+maxv_lcell \fifo_1_counter_sft[1] (
+// Equation(s):
+// fifo_1_counter_sft[1] = DFFEAS((fifo_1_counter_sft[1] $ ((\fifo_1_counter_sft[0]~1 ))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_1_counter_sft[4]~11_combout )
+// \fifo_1_counter_sft[1]~3  = CARRY(((!\fifo_1_counter_sft[0]~1 ) # (!fifo_1_counter_sft[1])))
+// \fifo_1_counter_sft[1]~3COUT1_14  = CARRY(((!\fifo_1_counter_sft[0]~1COUT1_13 ) # (!fifo_1_counter_sft[1])))
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_1_counter_sft[1]),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_1_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_1_counter_sft[0]~1 ),
+	.cin1(\fifo_1_counter_sft[0]~1COUT1_13 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_1_counter_sft[1]),
+	.cout(),
+	.cout0(\fifo_1_counter_sft[1]~3 ),
+	.cout1(\fifo_1_counter_sft[1]~3COUT1_14 ));
+// synopsys translate_off
+defparam \fifo_1_counter_sft[1] .cin0_used = "true";
+defparam \fifo_1_counter_sft[1] .cin1_used = "true";
+defparam \fifo_1_counter_sft[1] .lut_mask = "3c3f";
+defparam \fifo_1_counter_sft[1] .operation_mode = "arithmetic";
+defparam \fifo_1_counter_sft[1] .output_mode = "reg_only";
+defparam \fifo_1_counter_sft[1] .register_cascade_mode = "off";
+defparam \fifo_1_counter_sft[1] .sum_lutc_input = "cin";
+defparam \fifo_1_counter_sft[1] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N2
+maxv_lcell \fifo_1_counter_sft[2] (
+// Equation(s):
+// fifo_1_counter_sft[2] = DFFEAS((fifo_1_counter_sft[2] $ ((!\fifo_1_counter_sft[1]~3 ))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_1_counter_sft[4]~11_combout )
+// \fifo_1_counter_sft[2]~5  = CARRY(((fifo_1_counter_sft[2] & !\fifo_1_counter_sft[1]~3 )))
+// \fifo_1_counter_sft[2]~5COUT1_15  = CARRY(((fifo_1_counter_sft[2] & !\fifo_1_counter_sft[1]~3COUT1_14 )))
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_1_counter_sft[2]),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_1_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_1_counter_sft[1]~3 ),
+	.cin1(\fifo_1_counter_sft[1]~3COUT1_14 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_1_counter_sft[2]),
+	.cout(),
+	.cout0(\fifo_1_counter_sft[2]~5 ),
+	.cout1(\fifo_1_counter_sft[2]~5COUT1_15 ));
+// synopsys translate_off
+defparam \fifo_1_counter_sft[2] .cin0_used = "true";
+defparam \fifo_1_counter_sft[2] .cin1_used = "true";
+defparam \fifo_1_counter_sft[2] .lut_mask = "c30c";
+defparam \fifo_1_counter_sft[2] .operation_mode = "arithmetic";
+defparam \fifo_1_counter_sft[2] .output_mode = "reg_only";
+defparam \fifo_1_counter_sft[2] .register_cascade_mode = "off";
+defparam \fifo_1_counter_sft[2] .sum_lutc_input = "cin";
+defparam \fifo_1_counter_sft[2] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N3
+maxv_lcell \fifo_1_counter_sft[3] (
+// Equation(s):
+// fifo_1_counter_sft[3] = DFFEAS(fifo_1_counter_sft[3] $ ((((\fifo_1_counter_sft[2]~5 )))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_1_counter_sft[4]~11_combout )
+// \fifo_1_counter_sft[3]~7  = CARRY(((!\fifo_1_counter_sft[2]~5 )) # (!fifo_1_counter_sft[3]))
+// \fifo_1_counter_sft[3]~7COUT1_16  = CARRY(((!\fifo_1_counter_sft[2]~5COUT1_15 )) # (!fifo_1_counter_sft[3]))
+
+	.clk(\clk~combout ),
+	.dataa(fifo_1_counter_sft[3]),
+	.datab(vcc),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_1_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_1_counter_sft[2]~5 ),
+	.cin1(\fifo_1_counter_sft[2]~5COUT1_15 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_1_counter_sft[3]),
+	.cout(),
+	.cout0(\fifo_1_counter_sft[3]~7 ),
+	.cout1(\fifo_1_counter_sft[3]~7COUT1_16 ));
+// synopsys translate_off
+defparam \fifo_1_counter_sft[3] .cin0_used = "true";
+defparam \fifo_1_counter_sft[3] .cin1_used = "true";
+defparam \fifo_1_counter_sft[3] .lut_mask = "5a5f";
+defparam \fifo_1_counter_sft[3] .operation_mode = "arithmetic";
+defparam \fifo_1_counter_sft[3] .output_mode = "reg_only";
+defparam \fifo_1_counter_sft[3] .register_cascade_mode = "off";
+defparam \fifo_1_counter_sft[3] .sum_lutc_input = "cin";
+defparam \fifo_1_counter_sft[3] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N8
+maxv_lcell \Equal1~0 (
+// Equation(s):
+// \Equal1~0_combout  = (((fifo_1_counter_sft[0]) # (!fifo_1_counter_sft[2])) # (!fifo_1_counter_sft[1])) # (!fifo_1_counter_sft[3])
+
+	.clk(gnd),
+	.dataa(fifo_1_counter_sft[3]),
+	.datab(fifo_1_counter_sft[1]),
+	.datac(fifo_1_counter_sft[0]),
+	.datad(fifo_1_counter_sft[2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\Equal1~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Equal1~0 .lut_mask = "f7ff";
+defparam \Equal1~0 .operation_mode = "normal";
+defparam \Equal1~0 .output_mode = "comb_only";
+defparam \Equal1~0 .register_cascade_mode = "off";
+defparam \Equal1~0 .sum_lutc_input = "datac";
+defparam \Equal1~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N9
+maxv_lcell \fifo_1_counter_sft[4]~11 (
+// Equation(s):
+// \fifo_1_counter_sft[4]~11_combout  = (((fifo_1_counter_sft[4] & !\Equal1~0_combout )) # (!\fifo_1_counter_sft[4]~10_combout ))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\fifo_1_counter_sft[4]~10_combout ),
+	.datac(fifo_1_counter_sft[4]),
+	.datad(\Equal1~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\fifo_1_counter_sft[4]~11_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_1_counter_sft[4]~11 .lut_mask = "33f3";
+defparam \fifo_1_counter_sft[4]~11 .operation_mode = "normal";
+defparam \fifo_1_counter_sft[4]~11 .output_mode = "comb_only";
+defparam \fifo_1_counter_sft[4]~11 .register_cascade_mode = "off";
+defparam \fifo_1_counter_sft[4]~11 .sum_lutc_input = "datac";
+defparam \fifo_1_counter_sft[4]~11 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N4
+maxv_lcell \fifo_1_counter_sft[4] (
+// Equation(s):
+// fifo_1_counter_sft[4] = DFFEAS(fifo_1_counter_sft[4] $ ((((!\fifo_1_counter_sft[3]~7 )))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_1_counter_sft[4]~11_combout )
+
+	.clk(\clk~combout ),
+	.dataa(fifo_1_counter_sft[4]),
+	.datab(vcc),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_1_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_1_counter_sft[3]~7 ),
+	.cin1(\fifo_1_counter_sft[3]~7COUT1_16 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_1_counter_sft[4]),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_1_counter_sft[4] .cin0_used = "true";
+defparam \fifo_1_counter_sft[4] .cin1_used = "true";
+defparam \fifo_1_counter_sft[4] .lut_mask = "a5a5";
+defparam \fifo_1_counter_sft[4] .operation_mode = "normal";
+defparam \fifo_1_counter_sft[4] .output_mode = "reg_only";
+defparam \fifo_1_counter_sft[4] .register_cascade_mode = "off";
+defparam \fifo_1_counter_sft[4] .sum_lutc_input = "cin";
+defparam \fifo_1_counter_sft[4] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X2_Y1_N5
+maxv_lcell \soft_reset_1~reg0 (
+// Equation(s):
+// \soft_reset_1~reg0_regout  = DFFEAS(((\fifo_1_counter_sft[4]~10_combout  & (fifo_1_counter_sft[4] & !\Equal1~0_combout ))), GLOBAL(\clk~combout ), VCC, , , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(\fifo_1_counter_sft[4]~10_combout ),
+	.datac(fifo_1_counter_sft[4]),
+	.datad(\Equal1~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\soft_reset_1~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \soft_reset_1~reg0 .lut_mask = "00c0";
+defparam \soft_reset_1~reg0 .operation_mode = "normal";
+defparam \soft_reset_1~reg0 .output_mode = "reg_only";
+defparam \soft_reset_1~reg0 .register_cascade_mode = "off";
+defparam \soft_reset_1~reg0 .sum_lutc_input = "datac";
+defparam \soft_reset_1~reg0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \read_enb_2~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\read_enb_2~combout ),
+	.padio(read_enb_2));
+// synopsys translate_off
+defparam \read_enb_2~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N0
+maxv_lcell \fifo_2_counter_sft[4]~10 (
+// Equation(s):
+// \fifo_2_counter_sft[4]~10_combout  = ((\resetn~combout  & (!\read_enb_2~combout  & !\empty_2~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\resetn~combout ),
+	.datac(\read_enb_2~combout ),
+	.datad(\empty_2~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\fifo_2_counter_sft[4]~10_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_2_counter_sft[4]~10 .lut_mask = "000c";
+defparam \fifo_2_counter_sft[4]~10 .operation_mode = "normal";
+defparam \fifo_2_counter_sft[4]~10 .output_mode = "comb_only";
+defparam \fifo_2_counter_sft[4]~10 .register_cascade_mode = "off";
+defparam \fifo_2_counter_sft[4]~10 .sum_lutc_input = "datac";
+defparam \fifo_2_counter_sft[4]~10 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N5
+maxv_lcell \fifo_2_counter_sft[0] (
+// Equation(s):
+// fifo_2_counter_sft[0] = DFFEAS((!fifo_2_counter_sft[0]), GLOBAL(\clk~combout ), VCC, , , VCC, , , \fifo_2_counter_sft[4]~11_combout )
+// \fifo_2_counter_sft[0]~1  = CARRY((fifo_2_counter_sft[0]))
+// \fifo_2_counter_sft[0]~1COUT1_13  = CARRY((fifo_2_counter_sft[0]))
+
+	.clk(\clk~combout ),
+	.dataa(fifo_2_counter_sft[0]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_2_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_2_counter_sft[0]),
+	.cout(),
+	.cout0(\fifo_2_counter_sft[0]~1 ),
+	.cout1(\fifo_2_counter_sft[0]~1COUT1_13 ));
+// synopsys translate_off
+defparam \fifo_2_counter_sft[0] .lut_mask = "55aa";
+defparam \fifo_2_counter_sft[0] .operation_mode = "arithmetic";
+defparam \fifo_2_counter_sft[0] .output_mode = "reg_only";
+defparam \fifo_2_counter_sft[0] .register_cascade_mode = "off";
+defparam \fifo_2_counter_sft[0] .sum_lutc_input = "datac";
+defparam \fifo_2_counter_sft[0] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N6
+maxv_lcell \fifo_2_counter_sft[1] (
+// Equation(s):
+// fifo_2_counter_sft[1] = DFFEAS(fifo_2_counter_sft[1] $ ((((\fifo_2_counter_sft[0]~1 )))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_2_counter_sft[4]~11_combout )
+// \fifo_2_counter_sft[1]~3  = CARRY(((!\fifo_2_counter_sft[0]~1 )) # (!fifo_2_counter_sft[1]))
+// \fifo_2_counter_sft[1]~3COUT1_14  = CARRY(((!\fifo_2_counter_sft[0]~1COUT1_13 )) # (!fifo_2_counter_sft[1]))
+
+	.clk(\clk~combout ),
+	.dataa(fifo_2_counter_sft[1]),
+	.datab(vcc),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_2_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_2_counter_sft[0]~1 ),
+	.cin1(\fifo_2_counter_sft[0]~1COUT1_13 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_2_counter_sft[1]),
+	.cout(),
+	.cout0(\fifo_2_counter_sft[1]~3 ),
+	.cout1(\fifo_2_counter_sft[1]~3COUT1_14 ));
+// synopsys translate_off
+defparam \fifo_2_counter_sft[1] .cin0_used = "true";
+defparam \fifo_2_counter_sft[1] .cin1_used = "true";
+defparam \fifo_2_counter_sft[1] .lut_mask = "5a5f";
+defparam \fifo_2_counter_sft[1] .operation_mode = "arithmetic";
+defparam \fifo_2_counter_sft[1] .output_mode = "reg_only";
+defparam \fifo_2_counter_sft[1] .register_cascade_mode = "off";
+defparam \fifo_2_counter_sft[1] .sum_lutc_input = "cin";
+defparam \fifo_2_counter_sft[1] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N7
+maxv_lcell \fifo_2_counter_sft[2] (
+// Equation(s):
+// fifo_2_counter_sft[2] = DFFEAS((fifo_2_counter_sft[2] $ ((!\fifo_2_counter_sft[1]~3 ))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_2_counter_sft[4]~11_combout )
+// \fifo_2_counter_sft[2]~5  = CARRY(((fifo_2_counter_sft[2] & !\fifo_2_counter_sft[1]~3 )))
+// \fifo_2_counter_sft[2]~5COUT1_15  = CARRY(((fifo_2_counter_sft[2] & !\fifo_2_counter_sft[1]~3COUT1_14 )))
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_2_counter_sft[2]),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_2_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_2_counter_sft[1]~3 ),
+	.cin1(\fifo_2_counter_sft[1]~3COUT1_14 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_2_counter_sft[2]),
+	.cout(),
+	.cout0(\fifo_2_counter_sft[2]~5 ),
+	.cout1(\fifo_2_counter_sft[2]~5COUT1_15 ));
+// synopsys translate_off
+defparam \fifo_2_counter_sft[2] .cin0_used = "true";
+defparam \fifo_2_counter_sft[2] .cin1_used = "true";
+defparam \fifo_2_counter_sft[2] .lut_mask = "c30c";
+defparam \fifo_2_counter_sft[2] .operation_mode = "arithmetic";
+defparam \fifo_2_counter_sft[2] .output_mode = "reg_only";
+defparam \fifo_2_counter_sft[2] .register_cascade_mode = "off";
+defparam \fifo_2_counter_sft[2] .sum_lutc_input = "cin";
+defparam \fifo_2_counter_sft[2] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N8
+maxv_lcell \fifo_2_counter_sft[3] (
+// Equation(s):
+// fifo_2_counter_sft[3] = DFFEAS(fifo_2_counter_sft[3] $ ((((\fifo_2_counter_sft[2]~5 )))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_2_counter_sft[4]~11_combout )
+// \fifo_2_counter_sft[3]~7  = CARRY(((!\fifo_2_counter_sft[2]~5 )) # (!fifo_2_counter_sft[3]))
+// \fifo_2_counter_sft[3]~7COUT1_16  = CARRY(((!\fifo_2_counter_sft[2]~5COUT1_15 )) # (!fifo_2_counter_sft[3]))
+
+	.clk(\clk~combout ),
+	.dataa(fifo_2_counter_sft[3]),
+	.datab(vcc),
+	.datac(\~GND~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_2_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_2_counter_sft[2]~5 ),
+	.cin1(\fifo_2_counter_sft[2]~5COUT1_15 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_2_counter_sft[3]),
+	.cout(),
+	.cout0(\fifo_2_counter_sft[3]~7 ),
+	.cout1(\fifo_2_counter_sft[3]~7COUT1_16 ));
+// synopsys translate_off
+defparam \fifo_2_counter_sft[3] .cin0_used = "true";
+defparam \fifo_2_counter_sft[3] .cin1_used = "true";
+defparam \fifo_2_counter_sft[3] .lut_mask = "5a5f";
+defparam \fifo_2_counter_sft[3] .operation_mode = "arithmetic";
+defparam \fifo_2_counter_sft[3] .output_mode = "reg_only";
+defparam \fifo_2_counter_sft[3] .register_cascade_mode = "off";
+defparam \fifo_2_counter_sft[3] .sum_lutc_input = "cin";
+defparam \fifo_2_counter_sft[3] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N1
+maxv_lcell \Equal2~0 (
+// Equation(s):
+// \Equal2~0_combout  = (((fifo_2_counter_sft[0]) # (!fifo_2_counter_sft[3])) # (!fifo_2_counter_sft[2])) # (!fifo_2_counter_sft[1])
+
+	.clk(gnd),
+	.dataa(fifo_2_counter_sft[1]),
+	.datab(fifo_2_counter_sft[2]),
+	.datac(fifo_2_counter_sft[0]),
+	.datad(fifo_2_counter_sft[3]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\Equal2~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Equal2~0 .lut_mask = "f7ff";
+defparam \Equal2~0 .operation_mode = "normal";
+defparam \Equal2~0 .output_mode = "comb_only";
+defparam \Equal2~0 .register_cascade_mode = "off";
+defparam \Equal2~0 .sum_lutc_input = "datac";
+defparam \Equal2~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N2
+maxv_lcell \fifo_2_counter_sft[4]~11 (
+// Equation(s):
+// \fifo_2_counter_sft[4]~11_combout  = (((fifo_2_counter_sft[4] & !\Equal2~0_combout )) # (!\fifo_2_counter_sft[4]~10_combout ))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(fifo_2_counter_sft[4]),
+	.datac(\fifo_2_counter_sft[4]~10_combout ),
+	.datad(\Equal2~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\fifo_2_counter_sft[4]~11_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_2_counter_sft[4]~11 .lut_mask = "0fcf";
+defparam \fifo_2_counter_sft[4]~11 .operation_mode = "normal";
+defparam \fifo_2_counter_sft[4]~11 .output_mode = "comb_only";
+defparam \fifo_2_counter_sft[4]~11 .register_cascade_mode = "off";
+defparam \fifo_2_counter_sft[4]~11 .sum_lutc_input = "datac";
+defparam \fifo_2_counter_sft[4]~11 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N9
+maxv_lcell \fifo_2_counter_sft[4] (
+// Equation(s):
+// fifo_2_counter_sft[4] = DFFEAS(((\fifo_2_counter_sft[3]~7  $ (!fifo_2_counter_sft[4]))), GLOBAL(\clk~combout ), VCC, , , \~GND~combout , , , \fifo_2_counter_sft[4]~11_combout )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\~GND~combout ),
+	.datad(fifo_2_counter_sft[4]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(\fifo_2_counter_sft[4]~11_combout ),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(\fifo_2_counter_sft[3]~7 ),
+	.cin1(\fifo_2_counter_sft[3]~7COUT1_16 ),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(fifo_2_counter_sft[4]),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \fifo_2_counter_sft[4] .cin0_used = "true";
+defparam \fifo_2_counter_sft[4] .cin1_used = "true";
+defparam \fifo_2_counter_sft[4] .lut_mask = "f00f";
+defparam \fifo_2_counter_sft[4] .operation_mode = "normal";
+defparam \fifo_2_counter_sft[4] .output_mode = "reg_only";
+defparam \fifo_2_counter_sft[4] .register_cascade_mode = "off";
+defparam \fifo_2_counter_sft[4] .sum_lutc_input = "cin";
+defparam \fifo_2_counter_sft[4] .synch_mode = "on";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N3
+maxv_lcell \soft_reset_2~reg0 (
+// Equation(s):
+// \soft_reset_2~reg0_regout  = DFFEAS(((fifo_2_counter_sft[4] & (\fifo_2_counter_sft[4]~10_combout  & !\Equal2~0_combout ))), GLOBAL(\clk~combout ), VCC, , , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(fifo_2_counter_sft[4]),
+	.datac(\fifo_2_counter_sft[4]~10_combout ),
+	.datad(\Equal2~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\soft_reset_2~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \soft_reset_2~reg0 .lut_mask = "00c0";
+defparam \soft_reset_2~reg0 .operation_mode = "normal";
+defparam \soft_reset_2~reg0 .output_mode = "reg_only";
+defparam \soft_reset_2~reg0 .register_cascade_mode = "off";
+defparam \soft_reset_2~reg0 .sum_lutc_input = "datac";
+defparam \soft_reset_2~reg0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \full_2~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\full_2~combout ),
+	.padio(full_2));
+// synopsys translate_off
+defparam \full_2~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_64,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \full_0~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\full_0~combout ),
+	.padio(full_0));
+// synopsys translate_off
+defparam \full_0~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_56,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \full_1~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\full_1~combout ),
+	.padio(full_1));
+// synopsys translate_off
+defparam \full_1~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N0
+maxv_lcell \Mux0~0 (
+// Equation(s):
+// \Mux0~0_combout  = (fifo_addr[0] & (((\full_1~combout )))) # (!fifo_addr[0] & (((\full_0~combout ))))
+
+	.clk(gnd),
+	.dataa(fifo_addr[0]),
+	.datab(vcc),
+	.datac(\full_0~combout ),
+	.datad(\full_1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\Mux0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Mux0~0 .lut_mask = "fa50";
+defparam \Mux0~0 .operation_mode = "normal";
+defparam \Mux0~0 .output_mode = "comb_only";
+defparam \Mux0~0 .register_cascade_mode = "off";
+defparam \Mux0~0 .sum_lutc_input = "datac";
+defparam \Mux0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y4_N1
+maxv_lcell \Mux0~1 (
+// Equation(s):
+// \Mux0~1_combout  = (fifo_addr[1] & (!fifo_addr[0] & (\full_2~combout ))) # (!fifo_addr[1] & (((\Mux0~0_combout ))))
+
+	.clk(gnd),
+	.dataa(fifo_addr[0]),
+	.datab(fifo_addr[1]),
+	.datac(\full_2~combout ),
+	.datad(\Mux0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\Mux0~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Mux0~1 .lut_mask = "7340";
+defparam \Mux0~1 .operation_mode = "normal";
+defparam \Mux0~1 .output_mode = "comb_only";
+defparam \Mux0~1 .register_cascade_mode = "off";
+defparam \Mux0~1 .sum_lutc_input = "datac";
+defparam \Mux0~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \vld_out_0~I (
+	.datain(!\empty_0~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(vld_out_0));
+// synopsys translate_off
+defparam \vld_out_0~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \vld_out_1~I (
+	.datain(!\empty_1~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(vld_out_1));
+// synopsys translate_off
+defparam \vld_out_1~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \vld_out_2~I (
+	.datain(!\empty_2~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(vld_out_2));
+// synopsys translate_off
+defparam \vld_out_2~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_61,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \write_enb[0]~I (
+	.datain(\write_enb~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(write_enb[0]));
+// synopsys translate_off
+defparam \write_enb[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_62,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \write_enb[1]~I (
+	.datain(\write_enb~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(write_enb[1]));
+// synopsys translate_off
+defparam \write_enb[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_58,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \write_enb[2]~I (
+	.datain(\write_enb~2_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(write_enb[2]));
+// synopsys translate_off
+defparam \write_enb[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \soft_reset_0~I (
+	.datain(\soft_reset_0~reg0_regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(soft_reset_0));
+// synopsys translate_off
+defparam \soft_reset_0~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \soft_reset_1~I (
+	.datain(\soft_reset_1~reg0_regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(soft_reset_1));
+// synopsys translate_off
+defparam \soft_reset_1~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \soft_reset_2~I (
+	.datain(\soft_reset_2~reg0_regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(soft_reset_2));
+// synopsys translate_off
+defparam \soft_reset_2~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_59,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \fifo_full~I (
+	.datain(\Mux0~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(fifo_full));
+// synopsys translate_off
+defparam \fifo_full~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

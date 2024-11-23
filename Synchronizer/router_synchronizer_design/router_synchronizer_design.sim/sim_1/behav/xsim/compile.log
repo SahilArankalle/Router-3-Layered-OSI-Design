@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module router_synchronizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module router_synchronizer_tb
