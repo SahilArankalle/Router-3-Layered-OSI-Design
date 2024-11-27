@@ -6,12 +6,4 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "C:/Users/Sahil/Desktop/Maven/Project/FIFO/router_fifo_design/router_fifo_design.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/Users/Sahil/Desktop/Maven/Project/FIFO/router_fifo_design/router_fifo_design.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.router_fifo_design
-Compiling module xil_defaultlib.router_fifo_design_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot router_fifo_design_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

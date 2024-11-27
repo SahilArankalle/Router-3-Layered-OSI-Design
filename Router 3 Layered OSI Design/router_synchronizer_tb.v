@@ -51,66 +51,47 @@ router_synchronizer DUT (
 
 
 
-always #(cycle / 2) clk = ~clk;
+initial 
+	begin
+	clk = 1;
+	forever 
+	#5 clk=~clk;
+	end
 
 task rst_condition;
    begin
    resetn=1'b0;
-   @(negedge clk);
+	#10;
    resetn=1'b1;
    end
   endtask
 
-  task full_condition(input f0,f1,f2);
-   begin
-   full_0=f0;
-   full_1=f1;
-   full_2=f2;
-   end
-  endtask
-  
-  task empty_condition(input e0,e1,e2);
-   begin
-   empty_0 = e0;
-	empty_1 = e1;
-	empty_2 = e2;
-   end
-  endtask
-  
-  task read_enb_condition (input r0,r1,r2);
-   begin
-      read_enb_0=r0; 
-      read_enb_1=r1;
-      read_enb_2=r2;
-   end
-  endtask
-  
-  task data_feed (input d0, d1, input [1:0] d2);
-   begin
-		detect_addr = d0;
-		write_enb_reg = d1;
-		data_in = d2;
-	end
-  endtask
-  
-  
-  initial
-   begin
-     clk=1'b0;
-     rst_condition;
-	  data_feed(1,1,2'b01);
-     @(negedge clk)
-     full_condition(1,1,0);
-     read_enb_condition(0,1,1);
-     data_feed(0,1,2'b01);
-     empty_condition(0,0,1);
-	  
-	  repeat(30);
-	  #100 $finish;
-	end	
-  
-  initial
-  begin
-$monitor($time,"clock=%b,resetn=%b,data_in=%b,detect_addr=%b,full_0=%b,full_1=%b,full_2=%b,empty_0=%b,empty_1=%b,empty_2=%b,write_enb_reg=%b,read_enb_0=%b,read_enb_1=%b,read_enb_2=%b,write_enb=%b,fifo_full=%b,vld_out_0=%b,vld_out_1=%b,vld_out_2=%b,soft_reset_0=%b,soft_reset_1=%b,soft_reset_2=%b",,resetn,data_in,detect_addr,full_0,full_1,full_2,empty_0,empty_1,empty_2,write_enb_reg,read_enb_0,read_enb_1,read_enb_2,write_enb,fifo_full,vld_out_0,vld_out_1,vld_out_2,soft_reset_0,soft_reset_1,soft_reset_2);
-  end
-endmodule
+task operation ();
+begin
+		detect_addr=1'b1;
+		data_in=2'b10;
+		read_enb_0=1'b1;
+		read_enb_1=1'b1;
+		read_enb_2=1'b0;
+		write_enb_reg=1'b1;
+
+		full_2=1'b0;
+		empty_0=1'b0;
+		empty_1=1'b0;
+		empty_2=1'b1;
+end
+endtask
+
+	initial 
+		begin
+			clk = 0;
+			rst_condition;
+			#5;
+			operation();
+			#1000;
+			
+			
+			$finish;
+		end
+	endmodule
+	

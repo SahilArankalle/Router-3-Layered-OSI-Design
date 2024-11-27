@@ -62,3 +62,5 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME router_fifo_design_tb -se
 set_global_assignment -name EDA_TEST_BENCH_FILE router_fifo_design_tb.v -section_id router_fifo_design_tb
 set_global_assignment -name VERILOG_FILE router_synchronizer.v
 set_global_assignment -name VERILOG_FILE router_synchronizer_tb.v
+set_global_assignment -name VERILOG_FILE router_fsm.v
+set_global_assignment -name VERILOG_FILE router_fsm_tb.v

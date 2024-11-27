@@ -13,9 +13,9 @@ module router_synchronizer(
     input full_0,
     input full_1,
     input full_2,
-    output reg vld_out_0,
-    output reg vld_out_1,
-    output reg vld_out_2,
+    output wire vld_out_0,
+    output wire vld_out_1,
+    output wire vld_out_2,
     output reg [2:0] write_enb,
     output reg soft_reset_0,
     output reg soft_reset_1,
@@ -65,137 +65,89 @@ begin
 end
 
 // Valid out signal
-assign valid_out_0 = ~empty_0;
-assign valid_out_1 = ~empty_1;
-assign valid_out_2 = ~empty_2;
+assign vld_out_0 = ~empty_0;
+assign vld_out_1 = ~empty_1;
+assign vld_out_2 = ~empty_2;
 
-// Soft reset logic for FIFO 0
-always @(posedge clk) 
-begin
-    if (~resetn) 
-    begin
-        soft_reset_0 <= 0;
-        fifo_0_counter_sft <= 0;
-    end 
-    else 
-    begin
-        case (read_enb_0)
-            0: 
-            begin
-                case (vld_out_0)
-                    0: 
-                    begin
-                        fifo_0_counter_sft <= 1;
-                        soft_reset_0 <= 0;
-                    end
-                    1: 
-                    begin
-                        if (fifo_0_counter_sft == 30) 
-                        begin
-                            soft_reset_0 <= 1'b1;
-                            fifo_0_counter_sft <= 1;
-                        end 
-                        else 
-                        begin
-                            fifo_0_counter_sft <= fifo_0_counter_sft + 1'b1;
-                            soft_reset_0 <= 1'b0;
-                        end
-                    end
-                endcase
-            end
-            1: 
-            begin
-                soft_reset_0 <= 1'b0;
-                fifo_0_counter_sft <= 0;
-            end
-        endcase
+    // Counter and reset logic for soft_reset_0
+    always @(posedge clk) 
+	 begin
+        if (!resetn) 
+            fifo_0_counter_sft <= 5'b0;
+        else if (vld_out_0) 
+		  begin
+            if (!read_enb_0) 
+				begin
+                if (fifo_0_counter_sft == 5'b11110) 
+					 begin
+                    soft_reset_0 <= 1'b1;
+                    fifo_0_counter_sft <= 5'b0;
+                end 
+					 else 
+					 begin
+                    fifo_0_counter_sft <= fifo_0_counter_sft + 1'b1;
+                    soft_reset_0 <= 1'b0;
+                end
+            end 
+				else 
+                fifo_0_counter_sft <= 5'b0;
+        end 
+		  else 
+            fifo_0_counter_sft <= 5'b0;
     end
-end
 
-// Soft reset logic for FIFO 1
-always @(posedge clk) 
-begin
-    if (~resetn) 
-    begin
-        soft_reset_1 <= 0;
-        fifo_1_counter_sft <= 1;
-    end 
-    else 
-    begin
-        case (read_enb_1)
-            0: 
-            begin
-                case (vld_out_1)
-                    0: 
-                    begin
-                        fifo_1_counter_sft <= 1;
-                        soft_reset_1 <= 0;
-                    end
-                    1: 
-                    begin
-                        if (fifo_1_counter_sft == 30) 
-                        begin
-                            soft_reset_1 <= 1'b1;
-                            fifo_1_counter_sft <= 1;
-                        end 
-                        else 
-                        begin
-                            fifo_1_counter_sft <= fifo_1_counter_sft + 1'b1;
-                            soft_reset_1 <= 1'b0;
-                        end
-                    end
-                endcase
-            end
-            1: 
-            begin
-                soft_reset_1 <= 1'b0;
-                fifo_1_counter_sft <= 1;
-            end
-        endcase
+    // Counter and reset logic for soft_reset_1
+    always @(posedge clk) 
+	 begin
+        if (!resetn) 
+            fifo_1_counter_sft <= 5'b0;
+        else if (vld_out_1) 
+		  begin
+            if (!read_enb_1) 
+				begin
+                if (fifo_1_counter_sft == 5'b11110) 
+					 begin
+                    soft_reset_1 <= 1'b1;
+                    fifo_1_counter_sft <= 5'b0;
+                end 
+					 else 
+					 begin
+                    fifo_1_counter_sft <= fifo_1_counter_sft + 1'b1;
+                    soft_reset_1 <= 1'b0;
+                end
+            end 
+				else 
+                fifo_1_counter_sft <= 5'b0;
+        end 
+		  else 
+            fifo_1_counter_sft <= 5'b0;
     end
-end
 
-// Soft reset logic for FIFO 2
-always @(posedge clk) 
-begin
-    if (~resetn) 
-    begin
-        soft_reset_2 <= 0;
-        fifo_2_counter_sft <= 1;
-    end 
-    else 
-    begin
-        case (read_enb_2)
-            0: 
-            begin
-                case (vld_out_2)
-                    0: 
-                    begin
-                        fifo_2_counter_sft <= 1;
-                        soft_reset_2 <= 0;
-                    end
-                    1: 
-                    begin
-                        if (fifo_2_counter_sft == 30) 
-                        begin
-                            soft_reset_2 <= 1'b1;
-                            fifo_2_counter_sft <= 1;
-                        end 
-                        else 
-                        begin
-                            fifo_2_counter_sft <= fifo_2_counter_sft + 1'b1;
-                            soft_reset_2 <= 1'b0;
-                        end
-                    end
-                endcase
-            end
-            1: 
-            begin
-                soft_reset_2 <= 1'b0;
-                fifo_2_counter_sft <= 1;
-            end
-        endcase
+    // Counter and reset logic for soft_reset_2
+    always @(posedge clk) 
+	 begin
+        if (!resetn) 
+            fifo_2_counter_sft <= 5'b0;
+        else if (vld_out_2) 
+		  begin
+            if (!read_enb_2) 
+				begin
+                if (fifo_2_counter_sft == 5'b11110) 
+					 begin
+                    soft_reset_2 <= 1'b1;
+                    fifo_2_counter_sft <= 5'b0;
+                end 
+					 else 
+					 begin
+                    fifo_2_counter_sft <= fifo_2_counter_sft + 1'b1;
+                    soft_reset_2 <= 1'b0;
+                end
+            end 
+				else 
+                fifo_2_counter_sft <= 5'b0;
+        end 
+		  else 
+            fifo_2_counter_sft <= 5'b0;
     end
-end
 
 endmodule

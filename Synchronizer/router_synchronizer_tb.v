@@ -70,16 +70,15 @@ task operation ();
 begin
 		detect_addr=1'b1;
 		data_in=2'b10;
-		read_enb_0=1'b0;
+		read_enb_0=1'b1;
 		read_enb_1=1'b1;
 		read_enb_2=1'b0;
 		write_enb_reg=1'b1;
-		full_0=1'b0;
-		full_1=1'b1;
-		full_2=1'b1;
-		empty_0=1'b1;
+
+		full_2=1'b0;
+		empty_0=1'b0;
 		empty_1=1'b0;
-		empty_2=1'b0;
+		empty_2=1'b1;
 end
 endtask
 
