@@ -64,3 +64,5 @@ set_global_assignment -name VERILOG_FILE router_synchronizer.v
 set_global_assignment -name VERILOG_FILE router_synchronizer_tb.v
 set_global_assignment -name VERILOG_FILE router_fsm.v
 set_global_assignment -name VERILOG_FILE router_fsm_tb.v
+set_global_assignment -name VERILOG_FILE router_register.v
+set_global_assignment -name VERILOG_FILE router_register_tb.v

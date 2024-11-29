@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Router1x3
-Wed Nov 27 19:01:12 2024
+Fri Nov 29 19:42:01 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Nov 27 19:01:12 2024           ;
+; Analysis & Synthesis Status ; Failed - Fri Nov 29 19:42:01 2024           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; Router1x3                                   ;
 ; Top-level Entity Name       ; Router1x3                                   ;
@@ -138,38 +138,40 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 27 19:01:03 2024
+    Info: Processing started: Fri Nov 29 19:41:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Router1x3 -c Router1x3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file router_fifo_design.v
-    Info (12023): Found entity 1: router_fifo_design File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_fifo_design.v Line: 1
+    Info (12023): Found entity 1: router_fifo_design File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 1
 Warning (12019): Can't analyze file -- file Router1x3.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file router_fifo_design_tb.v
-    Info (12023): Found entity 1: router_fifo_design_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_fifo_design_tb.v Line: 1
+    Info (12023): Found entity 1: router_fifo_design_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router_synchronizer.v
-    Info (12023): Found entity 1: router_synchronizer File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_synchronizer.v Line: 1
+    Info (12023): Found entity 1: router_synchronizer File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_synchronizer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router_synchronizer_tb.v
-    Info (12023): Found entity 1: router_synchronizer_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_synchronizer_tb.v Line: 1
+    Info (12023): Found entity 1: router_synchronizer_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_synchronizer_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router_fsm.v
-    Info (12023): Found entity 1: router_fsm File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_fsm.v Line: 1
+    Info (12023): Found entity 1: router_fsm File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router_fsm_tb.v
-    Info (12023): Found entity 1: router_fsm_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_fsm_tb.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at router_synchronizer.v(68): created implicit net for "valid_out_0" File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_synchronizer.v Line: 68
-Warning (10236): Verilog HDL Implicit Net warning at router_synchronizer.v(69): created implicit net for "valid_out_1" File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_synchronizer.v Line: 69
-Warning (10236): Verilog HDL Implicit Net warning at router_synchronizer.v(70): created implicit net for "valid_out_2" File: C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/router_synchronizer.v Line: 70
+    Info (12023): Found entity 1: router_fsm_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file router_register.v
+    Info (12023): Found entity 1: router_register File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file router_register_tb.v
+    Info (12023): Found entity 1: router_register_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_register_tb.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at router_fsm.v(104): created implicit net for "full_stage" File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 104
 Error (12007): Top-level design entity "Router1x3" is undefined
-Info (144001): Generated suppressed messages file C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/output_files/Router1x3.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 5 warnings
-    Error: Peak virtual memory: 4695 megabytes
-    Error: Processing ended: Wed Nov 27 19:01:12 2024
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:05
+Info (144001): Generated suppressed messages file C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/output_files/Router1x3.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 3 warnings
+    Error: Peak virtual memory: 4693 megabytes
+    Error: Processing ended: Fri Nov 29 19:42:01 2024
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Sahil/Desktop/Maven/Project/Router 3 Layered OSI Design/output_files/Router1x3.map.smsg.
+The suppressed messages can be found in C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/output_files/Router1x3.map.smsg.
 
 

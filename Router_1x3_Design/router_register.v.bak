@@ -1,0 +1,18 @@
+module router_register(
+input clk,
+input resetn,
+input pkt_valid,
+input [7:0] data_in.
+input fifo_full,
+input reset_int_reg,
+input detect_addr,
+input ld_state,
+input laf_state,
+input full_state,
+input lfd_state,
+output parity_done,
+output low_pkt_valid,
+output err,
+output reg [7:0] data_out,
+);
+
