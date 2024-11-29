@@ -66,7 +66,7 @@ begin
 wait (~busy)
 
 @ (negedge clk);
-payloadlen = 6'd14;
+payloadlen = 14;
 addr = 2'b00;
 header = {payloadlen, addr};
 parity = 0;
@@ -103,7 +103,7 @@ begin
 wait (~busy)
 
 @ (negedge clk);
-payloadlen = 6'd16;
+payloadlen = 16;
 addr = 2'b01;
 header = {payloadlen, addr};
 parity = 0;
@@ -140,7 +140,7 @@ begin
 wait (~busy)
 
 @ (negedge clk);
-payloadlen = 6'd5;
+payloadlen = 5;
 addr = 2'b10;
 header = {payloadlen, addr};
 parity = 0;
