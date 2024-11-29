@@ -75,6 +75,9 @@ begin
 if (!resetn)
 low_pkt_valid <= 0;
 
+else if(reset_int_reg)
+low_pkt_valid<=0;
+
 else if (ld_state && !pkt_valid)
 low_pkt_valid <= 1'b1;
 
@@ -91,11 +94,11 @@ internal_parity <= 0;
 else if (detect_addr)
 internal_parity <= 0;
 
-else if (lfd_state)
-internal_parity <= internal_parity ^ header_byte;
+else if (lfd_state && pkt_valid)
+internal_parity <= internal_parity^header_byte;
 
-else if (lfd_state && pkt_valid && !fifo_full)
-internal_parity <=  internal_parity ^ data_in;
+else if (ld_state && pkt_valid && !fifo_full)
+internal_parity <=  internal_parity^data_in;
 
 else 
 internal_parity <= internal_parity;
@@ -141,10 +144,10 @@ err <= 0;
 
 else if (parity_done)
 begin
-if (internal_parity == packet_parity)
-err <= 0;
-else
+if (internal_parity != packet_parity)
 err <= 1;
+else
+err <= 0;
 end
 
 else 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Router1x3
-Fri Nov 29 19:42:01 2024
+Sat Nov 30 02:16:50 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,8 +10,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Router1x3|router_fsm:FSM|present_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: router_fsm:FSM
+ 13. Port Connectivity Checks: "router_register:comb_3"
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -38,11 +47,15 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Nov 29 19:42:01 2024           ;
+; Analysis & Synthesis Status ; Successful - Sat Nov 30 02:16:50 2024       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; Router1x3                                   ;
 ; Top-level Entity Name       ; Router1x3                                   ;
 ; Family                      ; MAX V                                       ;
+; Total logic elements        ; 1,101                                       ;
+; Total pins                  ; 43                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
@@ -132,19 +145,256 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+; router_fifo_design.v             ; yes             ; User Verilog HDL File  ; C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v  ;         ;
+; Router1x3.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3.v           ;         ;
+; router_synchronizer.v            ; yes             ; User Verilog HDL File  ; C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_synchronizer.v ;         ;
+; router_fsm.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v          ;         ;
+; router_register.v                ; yes             ; User Verilog HDL File  ; C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_register.v     ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 1101  ;
+;     -- Combinational with no register       ; 520   ;
+;     -- Register only                        ; 456   ;
+;     -- Combinational with a register        ; 125   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 440   ;
+;     -- 3 input functions                    ; 61    ;
+;     -- 2 input functions                    ; 126   ;
+;     -- 1 input functions                    ; 18    ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1029  ;
+;     -- arithmetic mode                      ; 72    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 83    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 581   ;
+; Total logic cells in carry chains           ; 87    ;
+; I/O pins                                    ; 43    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 581   ;
+; Total fan-out                               ; 3996  ;
+; Average fan-out                             ; 3.49  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                         ; Entity Name         ; Library Name ;
++---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+---------------------+--------------+
+; |Router1x3                            ; 1101 (0)    ; 581          ; 0          ; 43   ; 0            ; 520 (0)      ; 456 (0)           ; 125 (0)          ; 87 (0)          ; 0 (0)      ; |Router1x3                                  ; Router1x3           ; work         ;
+;    |router_fifo_design:FIFO_0|        ; 325 (325)   ; 170          ; 0          ; 0    ; 0            ; 155 (155)    ; 146 (146)         ; 24 (24)          ; 24 (24)         ; 0 (0)      ; |Router1x3|router_fifo_design:FIFO_0        ; router_fifo_design  ; work         ;
+;    |router_fifo_design:FIFO_1|        ; 325 (325)   ; 170          ; 0          ; 0    ; 0            ; 155 (155)    ; 146 (146)         ; 24 (24)          ; 24 (24)         ; 0 (0)      ; |Router1x3|router_fifo_design:FIFO_1        ; router_fifo_design  ; work         ;
+;    |router_fifo_design:FIFO_2|        ; 323 (323)   ; 170          ; 0          ; 0    ; 0            ; 153 (153)    ; 146 (146)         ; 24 (24)          ; 24 (24)         ; 0 (0)      ; |Router1x3|router_fifo_design:FIFO_2        ; router_fifo_design  ; work         ;
+;    |router_fsm:FSM|                   ; 21 (21)     ; 8            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Router1x3|router_fsm:FSM                   ; router_fsm          ; work         ;
+;    |router_register:comb_3|           ; 71 (71)     ; 43           ; 0          ; 0    ; 0            ; 28 (28)      ; 16 (16)           ; 27 (27)          ; 0 (0)           ; 0 (0)      ; |Router1x3|router_register:comb_3           ; router_register     ; work         ;
+;    |router_synchronizer:SYNCHRONIZER| ; 36 (36)     ; 20           ; 0          ; 0    ; 0            ; 16 (16)      ; 2 (2)             ; 18 (18)          ; 15 (15)         ; 0 (0)      ; |Router1x3|router_synchronizer:SYNCHRONIZER ; router_synchronizer ; work         ;
++---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Router1x3|router_fsm:FSM|present_state                                                                                                                                                                                                                                  ;
++----------------------------------+----------------------------------+-------------------------------+-------------------------------+---------------------------+-------------------------+-------------------------------+-------------------------------+------------------------------+
+; Name                             ; present_state.CHECK_PARITY_ERROR ; present_state.LOAD_AFTER_FULL ; present_state.FIFO_FULL_STATE ; present_state.LOAD_PARITY ; present_state.LOAD_DATA ; present_state.WAIT_TILL_EMPTY ; present_state.LOAD_FIRST_DATA ; present_state.DECODE_ADDRESS ;
++----------------------------------+----------------------------------+-------------------------------+-------------------------------+---------------------------+-------------------------+-------------------------------+-------------------------------+------------------------------+
+; present_state.DECODE_ADDRESS     ; 0                                ; 0                             ; 0                             ; 0                         ; 0                       ; 0                             ; 0                             ; 0                            ;
+; present_state.LOAD_FIRST_DATA    ; 0                                ; 0                             ; 0                             ; 0                         ; 0                       ; 0                             ; 1                             ; 1                            ;
+; present_state.WAIT_TILL_EMPTY    ; 0                                ; 0                             ; 0                             ; 0                         ; 0                       ; 1                             ; 0                             ; 1                            ;
+; present_state.LOAD_DATA          ; 0                                ; 0                             ; 0                             ; 0                         ; 1                       ; 0                             ; 0                             ; 1                            ;
+; present_state.LOAD_PARITY        ; 0                                ; 0                             ; 0                             ; 1                         ; 0                       ; 0                             ; 0                             ; 1                            ;
+; present_state.FIFO_FULL_STATE    ; 0                                ; 0                             ; 1                             ; 0                         ; 0                       ; 0                             ; 0                             ; 1                            ;
+; present_state.LOAD_AFTER_FULL    ; 0                                ; 1                             ; 0                             ; 0                         ; 0                       ; 0                             ; 0                             ; 1                            ;
+; present_state.CHECK_PARITY_ERROR ; 1                                ; 0                             ; 0                             ; 0                         ; 0                       ; 0                             ; 0                             ; 1                            ;
++----------------------------------+----------------------------------+-------------------------------+-------------------------------+---------------------------+-------------------------+-------------------------------+-------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++------------------------------------------+------------------------------------------------------+
+; Register name                            ; Reason for Removal                                   ;
++------------------------------------------+------------------------------------------------------+
+; router_fsm:FSM|present_state~2           ; Lost fanout                                          ;
+; router_fsm:FSM|present_state~3           ; Lost fanout                                          ;
+; router_fsm:FSM|present_state~4           ; Lost fanout                                          ;
+; router_fifo_design:FIFO_0|data_out[1]~en ; Merged with router_fifo_design:FIFO_0|data_out[0]~en ;
+; router_fifo_design:FIFO_0|data_out[2]~en ; Merged with router_fifo_design:FIFO_0|data_out[0]~en ;
+; router_fifo_design:FIFO_0|data_out[3]~en ; Merged with router_fifo_design:FIFO_0|data_out[0]~en ;
+; router_fifo_design:FIFO_0|data_out[4]~en ; Merged with router_fifo_design:FIFO_0|data_out[0]~en ;
+; router_fifo_design:FIFO_0|data_out[5]~en ; Merged with router_fifo_design:FIFO_0|data_out[0]~en ;
+; router_fifo_design:FIFO_0|data_out[6]~en ; Merged with router_fifo_design:FIFO_0|data_out[0]~en ;
+; router_fifo_design:FIFO_0|data_out[7]~en ; Merged with router_fifo_design:FIFO_0|data_out[0]~en ;
+; router_fifo_design:FIFO_1|data_out[1]~en ; Merged with router_fifo_design:FIFO_1|data_out[0]~en ;
+; router_fifo_design:FIFO_1|data_out[2]~en ; Merged with router_fifo_design:FIFO_1|data_out[0]~en ;
+; router_fifo_design:FIFO_1|data_out[3]~en ; Merged with router_fifo_design:FIFO_1|data_out[0]~en ;
+; router_fifo_design:FIFO_1|data_out[4]~en ; Merged with router_fifo_design:FIFO_1|data_out[0]~en ;
+; router_fifo_design:FIFO_1|data_out[5]~en ; Merged with router_fifo_design:FIFO_1|data_out[0]~en ;
+; router_fifo_design:FIFO_1|data_out[6]~en ; Merged with router_fifo_design:FIFO_1|data_out[0]~en ;
+; router_fifo_design:FIFO_1|data_out[7]~en ; Merged with router_fifo_design:FIFO_1|data_out[0]~en ;
+; router_fifo_design:FIFO_2|data_out[1]~en ; Merged with router_fifo_design:FIFO_2|data_out[0]~en ;
+; router_fifo_design:FIFO_2|data_out[2]~en ; Merged with router_fifo_design:FIFO_2|data_out[0]~en ;
+; router_fifo_design:FIFO_2|data_out[3]~en ; Merged with router_fifo_design:FIFO_2|data_out[0]~en ;
+; router_fifo_design:FIFO_2|data_out[4]~en ; Merged with router_fifo_design:FIFO_2|data_out[0]~en ;
+; router_fifo_design:FIFO_2|data_out[5]~en ; Merged with router_fifo_design:FIFO_2|data_out[0]~en ;
+; router_fifo_design:FIFO_2|data_out[6]~en ; Merged with router_fifo_design:FIFO_2|data_out[0]~en ;
+; router_fifo_design:FIFO_2|data_out[7]~en ; Merged with router_fifo_design:FIFO_2|data_out[0]~en ;
+; Total Number of Removed Registers = 24   ;                                                      ;
++------------------------------------------+------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 581   ;
+; Number of registers using Synchronous Clear  ; 83    ;
+; Number of registers using Synchronous Load   ; 29    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 552   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Router1x3|router_synchronizer:SYNCHRONIZER|fifo_addr[1]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Router1x3|router_register:comb_3|header_byte[4]                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Router1x3|router_register:comb_3|fifo_full_state_byte[2]         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|rd_ptr[3]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|wr_ptr[3]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|rd_ptr[1]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|wr_ptr[4]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|rd_ptr[3]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|wr_ptr[0]                    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Router1x3|router_register:comb_3|packet_parity[7]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[15][0]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[14][0]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[13][1]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[12][0]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[11][2]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[10][0]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[9][1]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[8][0]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[7][6]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[6][8]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[5][5]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[4][4]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[3][8]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[2][2]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[1][2]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|mem[0][5]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[15][5]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[14][0]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[13][1]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[12][8]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[11][6]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[10][8]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[9][7]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[8][2]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[7][7]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[6][4]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[5][1]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[4][0]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[3][7]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[2][6]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[1][2]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|mem[0][0]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[15][0]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[14][1]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[13][1]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[12][6]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[11][6]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[10][3]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[9][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[8][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[7][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[6][6]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[5][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[4][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[3][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[2][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[1][3]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|mem[0][8]                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Router1x3|router_register:comb_3|data_out[3]                     ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |Router1x3|router_synchronizer:SYNCHRONIZER|fifo_0_counter_sft[0] ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |Router1x3|router_synchronizer:SYNCHRONIZER|fifo_2_counter_sft[1] ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |Router1x3|router_synchronizer:SYNCHRONIZER|fifo_1_counter_sft[0] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Router1x3|router_register:comb_3|internal_parity[2]              ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|count[6]                     ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|count[6]                     ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|count[3]                     ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_0|data_out[0]~reg0             ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_1|data_out[1]~reg0             ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |Router1x3|router_fifo_design:FIFO_2|data_out[1]~reg0             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Router1x3|router_fsm:FSM|present_state                           ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 70 LEs               ; 0 LEs                  ; No         ; |Router1x3|router_fifo_design:FIFO_0|Mux1                         ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 70 LEs               ; 0 LEs                  ; No         ; |Router1x3|router_fifo_design:FIFO_1|Mux5                         ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 70 LEs               ; 0 LEs                  ; No         ; |Router1x3|router_fifo_design:FIFO_2|Mux6                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: router_fsm:FSM ;
++--------------------+-------+--------------------------------+
+; Parameter Name     ; Value ; Type                           ;
++--------------------+-------+--------------------------------+
+; DECODE_ADDRESS     ; 000   ; Unsigned Binary                ;
+; LOAD_FIRST_DATA    ; 001   ; Unsigned Binary                ;
+; WAIT_TILL_EMPTY    ; 010   ; Unsigned Binary                ;
+; LOAD_DATA          ; 011   ; Unsigned Binary                ;
+; LOAD_PARITY        ; 100   ; Unsigned Binary                ;
+; FIFO_FULL_STATE    ; 101   ; Unsigned Binary                ;
+; LOAD_AFTER_FULL    ; 110   ; Unsigned Binary                ;
+; CHECK_PARITY_ERROR ; 111   ; Unsigned Binary                ;
++--------------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "router_register:comb_3"                                                                                           ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; low_pkt_valid ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Nov 29 19:41:50 2024
+    Info: Processing started: Sat Nov 30 02:16:35 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Router1x3 -c Router1x3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file router_fifo_design.v
     Info (12023): Found entity 1: router_fifo_design File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 1
-Warning (12019): Can't analyze file -- file Router1x3.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file router1x3.v
+    Info (12023): Found entity 1: Router1x3 File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router_fifo_design_tb.v
     Info (12023): Found entity 1: router_fifo_design_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router_synchronizer.v
@@ -159,14 +409,66 @@ Info (12021): Found 1 design units, including 1 entities, in source file router_
     Info (12023): Found entity 1: router_register File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router_register_tb.v
     Info (12023): Found entity 1: router_register_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_register_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file router1x3_tb.v
+    Info (12023): Found entity 1: Router1x3_tb File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3_tb.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at router_fsm.v(104): created implicit net for "full_stage" File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 104
-Error (12007): Top-level design entity "Router1x3" is undefined
+Critical Warning (10846): Verilog HDL Instantiation warning at Router1x3.v(132): instance has no name File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3.v Line: 132
+Info (12127): Elaborating entity "Router1x3" for the top level hierarchy
+Info (12128): Elaborating entity "router_fifo_design" for hierarchy "router_fifo_design:FIFO_0" File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3.v Line: 35
+Warning (10036): Verilog HDL or VHDL warning at router_fifo_design.v(15): object "lfd_state_s" assigned a value but never read File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 15
+Warning (10230): Verilog HDL assignment warning at router_fifo_design.v(59): truncated value with size 9 to match size of target (8) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 59
+Warning (10230): Verilog HDL assignment warning at router_fifo_design.v(85): truncated value with size 32 to match size of target (5) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 85
+Warning (10230): Verilog HDL assignment warning at router_fifo_design.v(98): truncated value with size 32 to match size of target (5) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 98
+Info (12128): Elaborating entity "router_fsm" for hierarchy "router_fsm:FSM" File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3.v Line: 88
+Warning (10036): Verilog HDL or VHDL warning at router_fsm.v(104): object "full_stage" assigned a value but never read File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 104
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(100): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 100
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(101): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 101
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(102): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 102
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(103): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 103
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(104): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 104
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(105): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 105
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(106): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 106
+Warning (10230): Verilog HDL assignment warning at router_fsm.v(107): truncated value with size 32 to match size of target (1) File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 107
+Warning (10034): Output port "full_state" at router_fsm.v(19) has no driver File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fsm.v Line: 19
+Info (12128): Elaborating entity "router_synchronizer" for hierarchy "router_synchronizer:SYNCHRONIZER" File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3.v Line: 114
+Info (12128): Elaborating entity "router_register" for hierarchy "router_register:comb_3" File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/Router1x3.v Line: 132
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[0]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[1]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[2]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[3]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[4]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[5]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[6]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_0|data_out[7]" to the node "router_fifo_design:FIFO_0|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[0]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[1]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[2]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[3]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[4]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[5]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[6]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_1|data_out[7]" to the node "router_fifo_design:FIFO_1|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[0]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[1]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[2]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[3]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[4]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[5]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[6]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+    Warning (13047): Converted the fan-out from the tri-state buffer "router_fifo_design:FIFO_2|data_out[7]" to the node "router_fifo_design:FIFO_2|Equal1" into an OR gate File: C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/router_fifo_design.v Line: 50
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 1144 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 1101 logic cells
 Info (144001): Generated suppressed messages file C:/Users/Sahil/Desktop/Maven/Project/Router_1x3_Design/output_files/Router1x3.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 3 warnings
-    Error: Peak virtual memory: 4693 megabytes
-    Error: Processing ended: Fri Nov 29 19:42:01 2024
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4715 megabytes
+    Info: Processing ended: Sat Nov 30 02:16:50 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+

@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sat Nov 30 02:16:58 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Router1x3
+Top-level Entity Name : Router1x3
+Family : MAX V
+Device : 5M1270ZT144C4
+Timing Models : Final
+Total logic elements : 834 / 1,270 ( 66 % )
+Total pins : 43 / 114 ( 38 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
