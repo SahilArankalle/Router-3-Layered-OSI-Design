@@ -46,10 +46,10 @@ end
 
 task rst;
 begin
-    @(negedge clk)
-    resetn=1'b0;
-    @(negedge clk)
-    resetn=1'b1;
+@ (negedge clk)
+resetn = 1'b0;
+@ (negedge clk)
+resetn = 1'b1;
 end
 endtask
 
