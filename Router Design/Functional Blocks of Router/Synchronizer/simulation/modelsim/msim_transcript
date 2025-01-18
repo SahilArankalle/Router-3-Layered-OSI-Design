@@ -1,0 +1,52 @@
+# Reading pref.tcl
+# do router_synchronizer_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Sahil/Desktop/Maven/Project/Synchronizer {C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:37:40 on Nov 24,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sahil/Desktop/Maven/Project/Synchronizer" C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer.v 
+# -- Compiling module router_synchronizer
+# 
+# Top level modules:
+# 	router_synchronizer
+# End time: 12:37:40 on Nov 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Sahil/Desktop/Maven/Project/Synchronizer {C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:37:40 on Nov 24,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sahil/Desktop/Maven/Project/Synchronizer" C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v 
+# -- Compiling module router_synchronizer_tb
+# 
+# Top level modules:
+# 	router_synchronizer_tb
+# End time: 12:37:41 on Nov 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxv_ver -L rtl_work -L work -voptargs="+acc"  router_synchronizer_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxv_ver -L rtl_work -L work -voptargs=""+acc"" router_synchronizer_tb 
+# Start time: 12:37:41 on Nov 24,2024
+# Loading work.router_synchronizer_tb
+# Loading work.router_synchronizer
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v(95)
+#    Time: 1015 ps  Iteration: 0  Instance: /router_synchronizer_tb
+# 1
+# Break in Module router_synchronizer_tb at C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v line 95
+# End time: 13:00:42 on Nov 24,2024, Elapsed time: 0:23:01
+# Errors: 0, Warnings: 0

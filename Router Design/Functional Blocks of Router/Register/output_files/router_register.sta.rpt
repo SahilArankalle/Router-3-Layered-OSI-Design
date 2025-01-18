@@ -1,0 +1,477 @@
+Timing Analyzer report for router_register
+Fri Nov 29 20:41:30 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk'
+ 12. Hold: 'clk'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; router_register                                     ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M80ZM68C4                                          ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 161.6 MHz ; 161.6 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -5.188 ; -98.531       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 2.001 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                ;
++--------+-------------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; -5.188 ; internal_parity[2]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.928      ;
+; -5.146 ; packet_parity[5]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.886      ;
+; -5.132 ; packet_parity[2]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.872      ;
+; -4.967 ; internal_parity[4]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.707      ;
+; -4.950 ; packet_parity[3]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.690      ;
+; -4.863 ; internal_parity[3]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.603      ;
+; -4.841 ; internal_parity[6]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.581      ;
+; -4.735 ; low_pkt_valid~reg0      ; packet_parity[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.475      ;
+; -4.735 ; low_pkt_valid~reg0      ; packet_parity[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.475      ;
+; -4.652 ; internal_parity[5]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.392      ;
+; -4.621 ; packet_parity[7]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.361      ;
+; -4.357 ; parity_done~reg0        ; packet_parity[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.097      ;
+; -4.357 ; parity_done~reg0        ; packet_parity[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.097      ;
+; -4.285 ; low_pkt_valid~reg0      ; packet_parity[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.025      ;
+; -4.285 ; low_pkt_valid~reg0      ; packet_parity[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.025      ;
+; -4.285 ; low_pkt_valid~reg0      ; packet_parity[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.025      ;
+; -4.285 ; low_pkt_valid~reg0      ; packet_parity[5]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.025      ;
+; -4.285 ; low_pkt_valid~reg0      ; packet_parity[6]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.025      ;
+; -4.285 ; low_pkt_valid~reg0      ; packet_parity[7]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.025      ;
+; -4.263 ; packet_parity[4]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 5.003      ;
+; -4.252 ; packet_parity[6]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.992      ;
+; -3.942 ; header_byte[2]          ; internal_parity[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 4.682      ;
+; -3.935 ; header_byte[7]          ; data_out[7]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.675      ;
+; -3.907 ; parity_done~reg0        ; packet_parity[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.647      ;
+; -3.907 ; parity_done~reg0        ; packet_parity[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.647      ;
+; -3.907 ; parity_done~reg0        ; packet_parity[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.647      ;
+; -3.907 ; parity_done~reg0        ; packet_parity[5]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.647      ;
+; -3.907 ; parity_done~reg0        ; packet_parity[6]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.647      ;
+; -3.907 ; parity_done~reg0        ; packet_parity[7]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.647      ;
+; -3.891 ; internal_parity[7]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.631      ;
+; -3.882 ; header_byte[7]          ; internal_parity[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 4.622      ;
+; -3.812 ; header_byte[2]          ; data_out[2]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.552      ;
+; -3.791 ; internal_parity[0]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.531      ;
+; -3.714 ; header_byte[0]          ; internal_parity[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 4.454      ;
+; -3.704 ; header_byte[6]          ; internal_parity[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 4.444      ;
+; -3.672 ; header_byte[3]          ; internal_parity[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 4.412      ;
+; -3.643 ; header_byte[4]          ; internal_parity[4] ; clk          ; clk         ; 1.000        ; 0.000      ; 4.383      ;
+; -3.612 ; fifo_full_state_byte[0] ; data_out[0]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.352      ;
+; -3.324 ; header_byte[0]          ; data_out[0]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.064      ;
+; -3.284 ; internal_parity[1]      ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.024      ;
+; -3.215 ; fifo_full_state_byte[4] ; data_out[4]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.955      ;
+; -3.208 ; header_byte[5]          ; internal_parity[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.948      ;
+; -3.182 ; header_byte[1]          ; data_out[1]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.922      ;
+; -3.176 ; packet_parity[0]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 3.916      ;
+; -3.156 ; header_byte[5]          ; data_out[5]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.896      ;
+; -2.959 ; internal_parity[6]      ; internal_parity[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.699      ;
+; -2.900 ; low_pkt_valid~reg0      ; parity_done~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.640      ;
+; -2.895 ; packet_parity[1]        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 3.635      ;
+; -2.759 ; fifo_full_state_byte[7] ; data_out[7]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.499      ;
+; -2.728 ; fifo_full_state_byte[5] ; data_out[5]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.694 ; fifo_full_state_byte[2] ; data_out[2]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.434      ;
+; -2.620 ; fifo_full_state_byte[1] ; data_out[1]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.360      ;
+; -2.590 ; parity_done~reg0        ; err~reg0           ; clk          ; clk         ; 1.000        ; 0.000      ; 3.330      ;
+; -2.522 ; parity_done~reg0        ; parity_done~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.262      ;
+; -2.416 ; fifo_full_state_byte[3] ; data_out[3]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.156      ;
+; -2.381 ; header_byte[3]          ; data_out[3]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.121      ;
+; -2.282 ; header_byte[1]          ; internal_parity[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.022      ;
+; -2.279 ; header_byte[4]          ; data_out[4]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.019      ;
+; -2.147 ; internal_parity[1]      ; internal_parity[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.887      ;
+; -2.147 ; internal_parity[3]      ; internal_parity[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.887      ;
+; -2.138 ; internal_parity[7]      ; internal_parity[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.878      ;
+; -2.097 ; header_byte[6]          ; data_out[6]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.837      ;
+; -1.791 ; low_pkt_valid~reg0      ; low_pkt_valid~reg0 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.531      ;
+; -1.756 ; fifo_full_state_byte[6] ; data_out[6]~reg0   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.496      ;
+; -1.591 ; internal_parity[4]      ; internal_parity[4] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.331      ;
+; -1.590 ; internal_parity[5]      ; internal_parity[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.330      ;
+; -1.335 ; internal_parity[0]      ; internal_parity[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.075      ;
+; -1.335 ; internal_parity[2]      ; internal_parity[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.075      ;
++--------+-------------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                ;
++-------+-------------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 2.001 ; internal_parity[0]      ; internal_parity[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.075      ;
+; 2.001 ; internal_parity[2]      ; internal_parity[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.075      ;
+; 2.256 ; internal_parity[5]      ; internal_parity[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.330      ;
+; 2.257 ; internal_parity[4]      ; internal_parity[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.331      ;
+; 2.422 ; fifo_full_state_byte[6] ; data_out[6]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.496      ;
+; 2.457 ; low_pkt_valid~reg0      ; low_pkt_valid~reg0 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.531      ;
+; 2.763 ; header_byte[6]          ; data_out[6]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.837      ;
+; 2.804 ; internal_parity[7]      ; internal_parity[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.878      ;
+; 2.813 ; internal_parity[1]      ; internal_parity[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.887      ;
+; 2.813 ; internal_parity[3]      ; internal_parity[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.887      ;
+; 2.828 ; parity_done~reg0        ; parity_done~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.902      ;
+; 2.945 ; header_byte[4]          ; data_out[4]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.019      ;
+; 2.948 ; header_byte[1]          ; internal_parity[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 3.022      ;
+; 3.047 ; header_byte[3]          ; data_out[3]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.121      ;
+; 3.082 ; fifo_full_state_byte[3] ; data_out[3]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.156      ;
+; 3.256 ; parity_done~reg0        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 3.330      ;
+; 3.286 ; fifo_full_state_byte[1] ; data_out[1]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.360      ;
+; 3.360 ; fifo_full_state_byte[2] ; data_out[2]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.434      ;
+; 3.394 ; fifo_full_state_byte[5] ; data_out[5]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.468      ;
+; 3.425 ; fifo_full_state_byte[7] ; data_out[7]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.499      ;
+; 3.561 ; packet_parity[1]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 3.635      ;
+; 3.566 ; low_pkt_valid~reg0      ; parity_done~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.640      ;
+; 3.625 ; internal_parity[6]      ; internal_parity[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 3.699      ;
+; 3.822 ; header_byte[5]          ; data_out[5]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.896      ;
+; 3.842 ; packet_parity[0]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 3.916      ;
+; 3.848 ; header_byte[1]          ; data_out[1]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.922      ;
+; 3.874 ; header_byte[5]          ; internal_parity[5] ; clk          ; clk         ; 0.000        ; 0.000      ; 3.948      ;
+; 3.881 ; fifo_full_state_byte[4] ; data_out[4]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.955      ;
+; 3.950 ; internal_parity[1]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.024      ;
+; 3.990 ; header_byte[0]          ; data_out[0]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.064      ;
+; 4.278 ; fifo_full_state_byte[0] ; data_out[0]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.352      ;
+; 4.309 ; header_byte[4]          ; internal_parity[4] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.383      ;
+; 4.338 ; header_byte[3]          ; internal_parity[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.412      ;
+; 4.370 ; header_byte[6]          ; internal_parity[6] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.444      ;
+; 4.380 ; header_byte[0]          ; internal_parity[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.454      ;
+; 4.457 ; internal_parity[0]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.531      ;
+; 4.478 ; header_byte[2]          ; data_out[2]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.552      ;
+; 4.548 ; header_byte[7]          ; internal_parity[7] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.622      ;
+; 4.557 ; internal_parity[7]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.631      ;
+; 4.573 ; parity_done~reg0        ; packet_parity[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.647      ;
+; 4.573 ; parity_done~reg0        ; packet_parity[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.647      ;
+; 4.573 ; parity_done~reg0        ; packet_parity[4]   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.647      ;
+; 4.573 ; parity_done~reg0        ; packet_parity[5]   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.647      ;
+; 4.573 ; parity_done~reg0        ; packet_parity[6]   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.647      ;
+; 4.573 ; parity_done~reg0        ; packet_parity[7]   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.647      ;
+; 4.601 ; header_byte[7]          ; data_out[7]~reg0   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.675      ;
+; 4.608 ; header_byte[2]          ; internal_parity[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.682      ;
+; 4.918 ; packet_parity[6]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.992      ;
+; 4.929 ; packet_parity[4]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.003      ;
+; 4.951 ; low_pkt_valid~reg0      ; packet_parity[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.025      ;
+; 4.951 ; low_pkt_valid~reg0      ; packet_parity[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.025      ;
+; 4.951 ; low_pkt_valid~reg0      ; packet_parity[4]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.025      ;
+; 4.951 ; low_pkt_valid~reg0      ; packet_parity[5]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.025      ;
+; 4.951 ; low_pkt_valid~reg0      ; packet_parity[6]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.025      ;
+; 4.951 ; low_pkt_valid~reg0      ; packet_parity[7]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.025      ;
+; 5.023 ; parity_done~reg0        ; packet_parity[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.097      ;
+; 5.023 ; parity_done~reg0        ; packet_parity[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.097      ;
+; 5.287 ; packet_parity[7]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.361      ;
+; 5.318 ; internal_parity[5]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.392      ;
+; 5.401 ; low_pkt_valid~reg0      ; packet_parity[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.475      ;
+; 5.401 ; low_pkt_valid~reg0      ; packet_parity[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 5.475      ;
+; 5.507 ; internal_parity[6]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.581      ;
+; 5.529 ; internal_parity[3]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.603      ;
+; 5.616 ; packet_parity[3]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.690      ;
+; 5.633 ; internal_parity[4]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.707      ;
+; 5.798 ; packet_parity[2]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.872      ;
+; 5.812 ; packet_parity[5]        ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.886      ;
+; 5.854 ; internal_parity[2]      ; err~reg0           ; clk          ; clk         ; 0.000        ; 0.000      ; 5.928      ;
++-------+-------------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 69       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 69       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 224   ; 224  ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 11    ; 11   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                          ;
++-------------+--------------------------------------------------------------------------------------+
+; Input Port  ; Comment                                                                              ;
++-------------+--------------------------------------------------------------------------------------+
+; data_in[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; detect_addr ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_full   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; laf_state   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ld_state    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lfd_state   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pkt_valid   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resetn      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; data_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; err           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; low_pkt_valid ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; parity_done   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                          ;
++-------------+--------------------------------------------------------------------------------------+
+; Input Port  ; Comment                                                                              ;
++-------------+--------------------------------------------------------------------------------------+
+; data_in[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; detect_addr ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_full   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; laf_state   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ld_state    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lfd_state   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pkt_valid   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resetn      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; data_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; err           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; low_pkt_valid ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; parity_done   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Nov 29 20:41:29 2024
+Info: Command: quartus_sta router_register -c router_register
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'router_register.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.188
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.188             -98.531 clk 
+Info (332146): Worst-case hold slack is 2.001
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.001               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Fri Nov 29 20:41:30 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
