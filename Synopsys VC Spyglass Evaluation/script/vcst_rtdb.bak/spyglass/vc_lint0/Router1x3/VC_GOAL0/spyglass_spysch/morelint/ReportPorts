@@ -1,0 +1,16 @@
+SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
+VALUE@@clk@@INPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@resetn@@INPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@read_enb_0@@INPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@read_enb_1@@INPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@read_enb_2@@INPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@pkt_valid@@INPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@data_in@@INPUT@@7@@0@@-@@Router1x3@@No
+VALUE@@vld_out_0@@OUTPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@vld_out_1@@OUTPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@vld_out_2@@OUTPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@err@@OUTPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@busy@@OUTPUT@@0@@0@@-@@Router1x3@@No
+VALUE@@data_out_0@@OUTPUT@@7@@0@@-@@Router1x3@@No
+VALUE@@data_out_1@@OUTPUT@@7@@0@@-@@Router1x3@@No
+VALUE@@data_out_2@@OUTPUT@@7@@0@@-@@Router1x3@@No

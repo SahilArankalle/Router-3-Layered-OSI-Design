@@ -1,0 +1,13 @@
+Info: MdmToNSchema, created
+Info: onNldmUpdate : 
+Info: checkDBComplete: false
+Info: Started, state = 0
+Info: Created thread 
+Info: reset()
+Info: onVerdiCompileFinish
+Info: onVerdiCompile : creating DB link 
+Info: kdb path = /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/Router1x3.exe.daidir/kdb.elab++/
+Info: Linking /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/Router1x3.exe.daidir/kdb.elab++/work.lib++/DebussyLib.lib++ to ../../../DebussyLib.lib++ 
+Info: Finish callback 
+Info: reset()
+Info: linkNovasLibsToDB

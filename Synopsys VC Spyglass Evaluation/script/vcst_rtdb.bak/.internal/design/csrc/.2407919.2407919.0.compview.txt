@@ -1,0 +1,5 @@
+{"comelab":{"timestamp_begin":1742626436.998492991, "rt":2.03, "ut":0.58, "st":0.68}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1742626436.508507878}
+{"VCS_COMP_START_TIME": 1742626436.508507878}
+{"VCS_COMP_END_TIME": 1742626439.089198921}
+{"VCS_USER_OPTIONS": "-file /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/elaborateCmd -Xvcstatic_extns=0x4 -Xvcstatic_extns=0x100 +warn=noSM_CCE -suppress=SM_BB_LIST -suppress=SM_UM_LIST -kdb=common_elab -Xufe=parallel:incrdump +warn=noKDB-ELAB-E -verdi_opts -logdir /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/verdi/elabcomLog  -Xvd_opts=,-ssy,-ssv,-ssz,-silent,+disable_message+C00373,-rcFile,/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/verdi/elabcom.rc -full64"}

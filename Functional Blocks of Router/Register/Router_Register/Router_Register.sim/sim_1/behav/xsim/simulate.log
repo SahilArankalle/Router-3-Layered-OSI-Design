@@ -1,0 +1,47 @@
+Time resolution is 1 ps
+Time: 0, Data_in: xx, Internal Parity: xx, Packet Parity: xx, Error: x
+Time: 5000, Data_in: xx, Internal Parity: xx, Packet Parity: xx, Error: 0
+Time: 25000, Data_in: xx, Internal Parity: 00, Packet Parity: 00, Error: 0
+Time: 40000, Header Byte: 22, Testbench Parity: 22
+Time: 40000, Data_in: 22, Internal Parity: 00, Packet Parity: 00, Error: 0
+Time: 60000, Payload Byte 0: 24, Testbench Parity: 06
+Time: 60000, Data_in: 24, Internal Parity: 00, Packet Parity: 00, Error: 0
+Time: 65000, Data_in: 24, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 70000, Payload Byte 1: 81, Testbench Parity: 87
+Time: 70000, Data_in: 81, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 80000, Payload Byte 2: 09, Testbench Parity: 8e
+Time: 80000, Data_in: 09, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 90000, Payload Byte 3: 63, Testbench Parity: ed
+Time: 90000, Data_in: 63, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 100000, Payload Byte 4: 0d, Testbench Parity: e0
+Time: 100000, Data_in: 0d, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 110000, Payload Byte 5: 8d, Testbench Parity: 6d
+Time: 110000, Data_in: 8d, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 120000, Payload Byte 6: 65, Testbench Parity: 08
+Time: 120000, Data_in: 65, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 130000, Payload Byte 7: 12, Testbench Parity: 1a
+Time: 130000, Data_in: 12, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 140000, Data_in: 1a, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 155000, Data_in: 1a, Internal Parity: 22, Packet Parity: 1a, Error: 1
+Time: 260000, Header Byte: 22, Testbench Parity: 22
+Time: 260000, Data_in: 22, Internal Parity: 22, Packet Parity: 1a, Error: 1
+Time: 275000, Data_in: 22, Internal Parity: 00, Packet Parity: 00, Error: 0
+Time: 280000, Payload Byte 0: 01, Testbench Parity: 23
+Time: 280000, Data_in: 01, Internal Parity: 00, Packet Parity: 00, Error: 0
+Time: 285000, Data_in: 01, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 290000, Payload Byte 1: 0d, Testbench Parity: 2e
+Time: 290000, Data_in: 0d, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 300000, Payload Byte 2: 76, Testbench Parity: 58
+Time: 300000, Data_in: 76, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 310000, Payload Byte 3: 3d, Testbench Parity: 65
+Time: 310000, Data_in: 3d, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 320000, Payload Byte 4: ed, Testbench Parity: 88
+Time: 320000, Data_in: ed, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 330000, Payload Byte 5: 8c, Testbench Parity: 04
+Time: 330000, Data_in: 8c, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 340000, Payload Byte 6: f9, Testbench Parity: fd
+Time: 340000, Data_in: f9, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 350000, Payload Byte 7: c6, Testbench Parity: 3b
+Time: 350000, Data_in: c6, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 360000, Data_in: 00, Internal Parity: 22, Packet Parity: 00, Error: 0
+Time: 375000, Data_in: 00, Internal Parity: 22, Packet Parity: 00, Error: 1

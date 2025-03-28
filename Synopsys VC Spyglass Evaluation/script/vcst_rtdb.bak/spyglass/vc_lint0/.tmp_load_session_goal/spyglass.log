@@ -1,0 +1,14 @@
+SpyGlass run started at 12:23:57 PM on Mar 22 2025 
+
+SpyGlass Predictive Analyzer(R) - Version SpyGlass_vT-2022.06
+Synopsys TestMAX(TM)
+Last compiled on May 30 2022
+
+All Rights Reserved. Use, disclosure or duplication
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com.
+
+Loading Policy: spyglass (Version: SpyGlass_vT-2022.06) from path: /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/SG_COMPAT/SPYGLASS_HOME/policies/spyglass
+Loading Shared library libspyglassrules-Linux4.spyso from /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/SG_COMPAT/SPYGLASS_HOME/lib/libspyglassrules-Linux4.spyso 
+Loading Shared library libsdcInitRules-Linux4.spyso from /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/SG_COMPAT/SPYGLASS_HOME/lib/libsdcInitRules-Linux4.spyso 
+Loading Shared library librmerules-Linux4.spyso from /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/SG_COMPAT/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 

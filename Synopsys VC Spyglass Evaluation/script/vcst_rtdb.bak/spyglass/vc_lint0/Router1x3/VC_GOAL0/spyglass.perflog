@@ -1,0 +1,830 @@
+##perflog_version  : 1.0
+##spyglass_version : SpyGlass_vT-2022.06 (May 30 2022)
+#
+##system   : Linux mavenserver-RH3 4.18.0-553.44.1.el8_10.x86_64 #1 SMP Wed Mar 5 10:48:41 EST 2025 x86_64
+##cwd    : /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script
+##args   : -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -nl \
+             -batch \
+             -top 'Router1x3' \
+             -lib dware /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dware/lib \
+             -lib gtech /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/gtech/lib \
+             -lib dw01 /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw01/lib \
+             -lib dw02 /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw02/lib \
+             -lib dw03 /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw03/lib \
+             -lib dw04 /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw04/lib \
+             -lib dw05 /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw05/lib \
+             -lib dw06 /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw06/lib \
+             -lib WORK /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/WORK \
+             -rules='STARC05-2.10.1.4b,STARC05-2.10.1.4a,STARC05-2.3.1.2c,STARC05-2.1.3.1,STARC05-2.1.6.5,STARC05-2.11.3.1,STARC05-2.3.3.1,STARC05-2.10.3.2a,STARC05-2.10.2.3,STARC05-2.3.1.6,STARC05-2.3.1.5b,STARC05-2.2.3.3,STARC05-2.1.5.3,STARC05-2.1.4.5,sim_race02,NoXInCase-ML,ParamWidthMismatch-ML,NoAssignX-ML,PragmaComments-ML,ReportPortInfo-ML,W528,W505,W467,W424,W421,W398,W293,W287b,W287a,W240,W71,W110a,mixedsenselist,W416,W292,W156,W123,W122,W116,W422,W502,W499,W486,W481b,W481a,W480,W426,W415a,W362,W352,W337,W317,W289,W263,W224,W218,W216,W215,W66,W19,W496b,W496a,W110,bothedges,badimplicitSM4,badimplicitSM2,badimplicitSM1,W442f,W442c,W442b,W442a,W339a' \
+             -wdir '/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/VC_GOAL0' \
+             -mixed \
+             -policy='lint,morelint,simulation,starc2005' \
+             +incdir+./+ \
+             -noreport \
+             --perflog \
+             -allow_non_lrm \
+             --goal_info 'VC_GOAL0@' \
+             -use_vcs_compile \
+             -projectwdir '/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0' \
+             -templatedir '/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass' \
+             -check_celldefine \
+             --template_info 'VC_GOAL0' \
+             -prefer_tech_lib \
+             -ignore_pgpin 'true' \
+             --disable_sgom_db \
+             -disable_html_report 'html,datasheet,dashboard' \
+             -allow_module_override \
+             -allow_celldefine_as_top \
+             -suppress_verilog_rules 'W505,W467,W424,W293,W422,W481b,W481a,W426,W289,W218,W216,W215,W66,bothedges,badimplicitSM4,badimplicitSM2,badimplicitSM1,W442f,W442c,W442b,W442a' \
+             -existing_vir_dump_path '/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/' \
+             -enable_generate_label_naming \
+             -enable_detailed_hierarchy \
+             --disable_internal_waivers_gen \
+             -check_static_value=no \
+             -checkfullbus=W240,W528 \
+             -checkfullrecord=W123,W240,W528 \
+             -checkfullstruct=no \
+             -disable_rtl_deadcode=no \
+             -filter_mark_open=no \
+             -handle_shift_op=no \
+             -ignoreModuleInstance=yes \
+             -no_strict=no \
+             -nocheckoverflow='STARC05-2.1.3.1,STARC05-2.10.3.2a,W110,W116,W263,W362,W416,W486' \
+             -report_only_from_one_hierarchy=no \
+             -strict=no \
+             -use_lrm_width=no \
+             -64bit 
+#
+## Table-I : Incremental memory and time data for individual events
+## Short explanation of different columns follows:
+## -----------------------------------------------
+## Policy              --> name of the policy
+## Event               --> mostly it's a rule, but in some of the cases it may refer
+##                         to a particular event. e.g., SGOM population
+## Lang                --> language corresponding to <Event>
+##                   [VV=mixed VE=verilog VH=vhdl]
+## StartPeak           --> peak memory(in KB) at the start of the <Event>
+## StartHeap           --> cumulative heap memory(in KB) at the start of the <Event>
+## StartMem            --> cumulative memory(in KB) at the start of the <Event>
+## StartRSS            --> cumulative RSS/RAM memory(in KB) at the start of the <Event>
+## StartSwap           --> cumulative Swap memory(in KB) at the start of the <Event>
+## StartPeakRSS        --> Peak RSS/RAM memory(in KB) at the start of the <Event>
+## IncrMem             --> memory(in KB) consumed by <Event>
+## IncrHeap            --> increase in peak memory(in KB) during <Event>
+## EndHeap             --> cumulative heap memory(in KB) at the end of the <Event>
+## EndPeak             --> peak memory(in KB) at the end of the <Event>
+## EndRSS              --> cumulative RSS/RAM memory(in KB) at the end of the <Event>
+## EndSwap             --> cumulative Swap memory(in KB) at the end of the <Event>
+## EndPeakRSS          --> Peak RSS/RAM memory(in KB) at the end of the <Event>
+## EndPeakRSS+EndSwap  --> Peak RSS/RAM + Swap memory(in KB) at the end of the <Event>
+## IncrCpuTime    --> cpu time(in seconds) taken by <Event>
+## IncrClkTime    --> the elapsed time (in seconds) taken by <Event>
+## Type           --> if <Event> is a rule, then it denotes 'rule-type',
+##                   else it is 'NONE'
+## Msg            --> mostly it'll be name of the design unit, sometimes it
+##                   may denote number of design units present in the design
+##
+## Description: All the rows of Table-I begin with a 'i ' so that scripts
+##       can filter the incremental table data and distinguish
+##       them from the data of Table-II.
+##
+## Please note that some entries of Table-I can come after Table-II entries
+## You can distinguish it with the rows begin with a 'i ' 
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+#Policy     Event               Lang  StartPeak StartHeap StartMem StartRSS StartSwap StartPeakRSS  IncrMem  IncrHeap EndHeap EndPeak EndRSS EndSwap EndPeakRSS EndPeakRSS+EndSwap  IncrCpuTime  IncrClkTime Type:Msg #
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+i SpyGlass    SG.COPYRULES             VV  855256  855256  213208  382028       0         382028    17584.0   19032  874288  874288  401036       0    401036          401036          0.25         0.26 NONE:
+i SpyGlass    SG.PERL.Init             VV  849980  820948  158864  365416       0         378468    71952.0   53340  874288  874288  401036       0    401036          401036          1.72         1.58 ID:2
+i lint        Prereqs_RTLSchematic.Init VE  875000  875000  233480  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    DetectTopDesignUnits.Init VV  875000  875000  233480  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 RTLALLDULIST:
+i SpyGlass    InfoAnalyzeBBox.Init     VV  875000  875000  233480  401772       0         401772       16.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    WarnAnalyzeBBox.Init     VV  875000  875000  233464  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    ErrorAnalyzeBBox.Init    VV  875000  875000  233464  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    FatalAnalyzeBBox.Init    VV  875000  875000  233464  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    AnalyzeBBox.Init         VV  875000  875000  233464  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    SortVhdlFiles.Init       VH  875000  875000  233464  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    ElabSummary.Init         VV  875000  875000  233464  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    InfoSglibVersionSummary.Init VV  875000  875000  233464  401772       0         401772       16.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    FatalSglibVersionSummary.Init VV  875000  875000  233480  401772       0         401772        0.0       0  875000  875000  401772       0    401772          401772          0.00         0.00 SETUP:
+i SpyGlass    GenerateConfMap.Init     VH  875328  875328  233776  402640       0         402640       32.0       0  875328  875328  402640       0    402640          402640          0.00         0.00 RTLALLDULIST:
+i SpyGlass    SGDC_memorywritepin04.Init VV  875328  875328  233848  402640       0         402640      -24.0       0  875328  875328  402640       0    402640          402640          0.00         0.00 RTLALLDULIST:
+i SpyGlass    SGDC_require_path03.Init VV  875392  875392  233856  402640       0         402640       32.0       0  875392  875392  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_require_value03.Init VV  875392  875392  233896  402640       0         402640      -32.0       0  875392  875392  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_reset02.Init        VV  875392  875392  233864  402640       0         402640        8.0       0  875392  875392  402640       0    402640          402640          0.00         0.00 RTLALLDULIST:
+i SpyGlass    SGDC_reset03.Init        VV  875392  875392  233872  402640       0         402640        0.0       0  875392  875392  402640       0    402640          402640          0.00         0.00 RTLALLDULIST:
+i SpyGlass    SGDC_voltagedomain05.Init VV  875456  875456  233952  402640       0         402640        8.0      64  875520  875520  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_voltagedomain06.Init VV  875520  875520  233992  402640       0         402640        0.0       0  875520  875520  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_voltagedomain07.Init VV  875520  875520  233992  402640       0         402640        8.0       0  875520  875520  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_powerdomainoutputs02.Init VV  875520  875520  234000  402640       0         402640        8.0       0  875520  875520  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_supply01.Init       VV  875520  875520  234008  402640       0         402640        0.0       0  875520  875520  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_fifo01.Init         VV  875520  875520  234016  402640       0         402640        8.0       0  875520  875520  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_set_case_analysis_LC.Init VV  875520  875520  234008  402640       0         402640        0.0       0  875520  875520  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_power_data01.Init   VV  875520  875520  234016  402640       0         402640        8.0      64  875584  875584  402640       0    402640          402640          0.00         0.00 SETUP:
+i SpyGlass    SGDC_ungroup01.Init      VV  875584  875584  234056  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    _abstractPortSGDC.Init   VV  875584  875584  234056  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port03.Init VV  875584  875584  234064  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port04.Init VV  875584  875584  234064  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port05.Init VV  875584  875584  234064  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port06.Init VV  875584  875584  234064  402936       0         402936        8.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port07.Init VV  875584  875584  234072  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port08.Init VV  875584  875584  234072  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port10.Init VV  875584  875584  234072  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port11.Init VV  875584  875584  234072  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port12.Init VV  875584  875584  234072  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port13.Init VV  875584  875584  234072  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port14.Init VV  875584  875584  234072  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port15.Init VV  875584  875584  234072  402936       0         402936        8.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port18.Init VV  875584  875584  234088  402936       0         402936      -32.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port21.Init VV  875584  875584  234056  402936       0         402936        0.0       0  875584  875584  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    STX_VH_437.Init          VH  875648  875648  234096  402936       0         402936       32.0       0  875648  875648  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    sdc_init_rule.Init       VV  875712  875712  234176  402936       0         402936       32.0       0  875712  875712  402936       0    402936          402936          0.00         0.00 SETUP:
+i SpyGlass    HdlLibDuCheck_01.Init    VV  875840  875840  234328  403200       0         403200       16.0      64  875904  875904  403200       0    403200          403200          0.00         0.00 SETUP:
+i SpyGlass    HdlLibDuCheck_02.Init    VV  875904  875904  234376  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 SETUP:
+i SpyGlass    HdlLibDuCheck_03.Init    VV  875904  875904  234376  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 SETUP:
+i lint        PrereqRCAUsage.Init      VE  875904  875904  234392  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W110.Init                VE  875904  875904  234392  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W122.Init                VE  875904  875904  234392  403200       0         403200       32.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W496a.Init               VE  875904  875904  234392  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W496b.Init               VE  875904  875904  234392  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W19.Init                 VE  875904  875904  234392  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W66.Init                 VE  875904  875904  234392  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W116.Init                VE  875904  875904  234392  403200       0         403200        0.0       0  875904  875904  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W123.Init                VE  875904  875904  234400  403200       0         403200       32.0      64  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W156.Init                VE  875968  875968  234464  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W215.Init                VE  875968  875968  234464  403200       0         403200        8.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W216.Init                VE  875968  875968  234440  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W218.Init                VE  875968  875968  234440  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W224.Init                VE  875968  875968  234440  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W263.Init                VE  875968  875968  234448  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W289.Init                VE  875968  875968  234448  403200       0         403200        8.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W317.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 RTLDULIST:
+i lint        W337.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W416.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W352.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W362.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W415a.Init               VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W422.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 RTLDULIST:
+i lint        W426.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 RTLDULIST:
+i lint        W480.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 RTLDULIST:
+i lint        W481a.Init               VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 RTLDULIST:
+i lint        W481b.Init               VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 RTLDULIST:
+i lint        W486.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W499.Init                VE  875968  875968  234456  403200       0         403200        0.0       0  875968  875968  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W502.Init                VE  875968  875968  234456  403200       0         403200       32.0      64  876032  876032  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W116.Init                VH  876032  876032  234520  403200       0         403200        0.0       0  876032  876032  403200       0    403200          403200          0.00         0.00 ELABDU:
+i lint        W122.Init                VH  876032  876032  234520  403200       0         403200        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W123.Init                VH  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W71.Init                 VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W240.Init                VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W240.Init                VH  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W287a.Init               VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W287b.Init               VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 RTLDULIST:
+i lint        W293.Init                VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W293.Init                VH  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 RTLDULIST:
+i lint        W398.Init                VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W421.Init                VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 RTLDULIST:
+i lint        W424.Init                VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W467.Init                VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W505.Init                VE  876032  876032  234520  404576       0         404576        0.0       0  876032  876032  404576       0    404576          404576          0.00         0.00 ELABDU:
+i lint        W528.Init                VE  876032  876032  234520  404576       0         404576     1384.0    1344  877376  877376  406056       0    406056          406056          0.00         0.00 ELABDU:
+i lint        W528.Init                VH  877376  877376  235872  406056       0         406056      608.0     576  877952  877952  406584       0    406584          406584          0.00         0.00 ELABDU:
+i lint        PrereqLEXRCA.Init        VE  877952  877952  236448  406584       0         406584        0.0       0  877952  877952  406584       0    406584          406584          0.00         0.00 LEXICAL:
+i morelint    Prereqs_ConstantInput-ML.Init VH  877952  877952  236448  406584       0         406584        0.0       0  877952  877952  406584       0    406584          406584          0.00         0.00 ELABDU:
+i morelint    ReportPortInfo-ML.Init   VV  877952  877952  236448  406584       0         406584       96.0     128  878080  878080  406584       0    406584          406584          0.00         0.00 LEXICAL:
+i morelint    PragmaComments-ML.Init   VH  878080  878080  236576  406584       0         406584        8.0    1152  879232  879232  408024       0    408024          408024          0.00         0.00 LEXICAL:
+i morelint    NoAssignX-ML.Init        VE  879232  879232  236584  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i morelint    ParamWidthMismatch-ML.Init VE  879232  879232  236584  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i morelint    NoXInCase-ML.Init        VH  879232  879232  236584  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i simulation  sim_race02.Init          VE  879232  879232  236584  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.1.3.1.Init     VE  879232  879232  236584  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.10.1.4a.Init   VE  879232  879232  236584  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.10.1.4b.Init   VE  879232  879232  236584  408024       0         408024        8.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i SpyGlass    RtlDesignInfo.Init       VV  879232  879232  236592  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 RTLALLDULIST:
+i starc2005   STARC05-2.1.4.5.Init     VE  879232  879232  236592  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.1.5.3.Init     VE  879232  879232  236592  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.2.3.3.Init     VE  879232  879232  236592  408024       0         408024       16.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.3.1.5b.Init    VE  879232  879232  236608  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 RTLDULIST:
+i starc2005   STARC05-2.3.3.1.Init     VE  879232  879232  236608  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 RTLDULIST:
+i starc2005   STARC05-2.10.2.3.Init    VE  879232  879232  236608  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.10.3.2a.Init   VE  879232  879232  236608  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.11.3.1.Init    VE  879232  879232  236608  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.11.3.1.Init    VH  879232  879232  236608  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 RTLDULIST:
+i SpyGlass    SG.WAIVEREAD             VV  879232  879232  236624  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 NONE:
+i SpyGlass    SG.WAIVEREAD             VV  879232  879232  236624  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 NONE:
+i SpyGlass    SG.CONSTRREAD            VV  879232  879232  236624  408024       0         408024        0.0       0  879232  879232  408024       0    408024          408024          0.00         0.00 NONE:
+i SpyGlass    SG.SGOM                  VV  879232  879232  236744  408024       0         408024     2368.0    2016  881248  881248  408024       0    408024          408024          0.00         0.00 NONE:/home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/SG_COMPAT/SPYGLASS_HOME/auxi/gates/rtlc.prim.slf.lib
+i SpyGlass    PrecompileLibCheck01     VV  881248  881248  229328  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    PrecompileLibCheck02     VV  881248  881248  229328  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    PrecompileLibCheck03     VV  881248  881248  229328  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    PrecompileLibCheck04     VV  881248  881248  229328  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    AbstractInterface        VV  881248  881248  229328  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_assume_path01       VV  881248  881248  229336  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_sdcschema02         VV  881248  881248  229336  408024       0         408024       32.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_clock05             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_clock09             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_force_ta05          VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_require_path03      VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_require_value03     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_voltagedomain05     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_voltagedomain06     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_voltagedomain07     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_powerdomainoutputs02 VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_supply01            VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive01             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive02             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive03             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive04             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive05             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive06             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive07             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive08             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive09             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive10             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive11             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive12             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive13             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive21             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive22             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive30             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive32             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive33             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive36             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive38             VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_fifo01              VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_libgroup01          VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_libgroup02          VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_libgroup04          VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_power_data01        VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_ungroup01           VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port06     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port14     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port15     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port18     VV  881248  881248  229368  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    sdc_init_rule            VV  881248  881248  229368  408024       0         408024       80.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    CMD_ignorelibs01         VV  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    ReportRuleNotRun         VV  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.01 SETUP:
+i lint        W442a                    VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        W442b                    VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        W442c                    VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        W442f                    VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        mixedsenselist           VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        badimplicitSM1           VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        badimplicitSM2           VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        badimplicitSM4           VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        bothedges                VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i lint        W421                     VH  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i morelint    PragmaComments-ML        VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i starc2005   STARC05-2.3.1.2c         VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i starc2005   STARC05-2.1.6.5          VE  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SG.INCRPCVALIDATE        VV  881248  881248  229448  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 NONE:LibHdlFiles
+i SpyGlass    ReportStopSummary        VV  881248  881248  229672  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    ReportIgnoreSummary      VV  881248  881248  229672  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    VCSRunSummary            VV  881248  881248  229672  408024       0         408024        0.0       0  881248  881248  408024       0    408024          408024          0.00         0.00 SETUP:
+i SpyGlass    SG.HDLPARSEINPUT         VV 1019876 1019840  370792  422712       0         422712        0.0       0 1019840 1019876  422712       0    422712          422712          0.00         0.00 NONE:
+i SpyGlass    SG.HDLPARSE              VV 1019876 1019840  370792  422712       0         422712    65624.0   65552 1085392 1085392  422712       0    422712          422712          0.01         0.00 NONE:0
+i SpyGlass    SG.SETVCSLIB             VE 1085392 1085392  436424  422712       0         422712      680.0       0 1085392 1085392  422712       0    422712          422712          0.00         0.00 NONE:WORK
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502808  424760       0         424760        0.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:dware
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502808  424760       0         424760        0.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:gtech
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502808  424760       0         424760        0.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:dw01
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502808  424760       0         424760       16.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:dw02
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502824  424760       0         424760       32.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:dw03
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502856  424760       0         424760        0.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:dw04
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502856  424760       0         424760        8.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:dw05
+i SpyGlass    SG.SETVCSLIB             VE 1150944 1150944  502864  424760       0         424760        8.0       0 1150944 1150944  424760       0    424760          424760          0.00         0.00 NONE:dw06
+i SpyGlass    SG.VIRLOAD               VE 1150944 1150944  502872  424760       0         424760       56.0       0 1150944 1150944  427888       0    427888          427888          0.00         0.00 NONE:Router1x3
+i SpyGlass    SG.VIR2VE                VE 1150944 1150944  502928  427888       0         427888       24.0       0 1150944 1150944  427888       0    427888          427888          0.00         0.00 NONE:Router1x3
+i SpyGlass    SG.VIRLOAD               VE 1150944 1150944  502952  427888       0         427888        8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_fifo_design
+i SpyGlass    SG.VIR2VE                VE 1150944 1150944  502960  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_fifo_design
+i SpyGlass    SG.VIRLOAD               VE 1150944 1150944  502960  431688       0         431688        8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_fsm
+i SpyGlass    SG.VIR2VE                VE 1150944 1150944  502968  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_fsm
+i SpyGlass    SG.VIRLOAD               VE 1150944 1150944  502968  431688       0         431688       32.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_synchronizer
+i SpyGlass    SG.VIR2VE                VE 1150944 1150944  503000  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_synchronizer
+i SpyGlass    SG.VIRLOAD               VE 1150944 1150944  503000  431688       0         431688       32.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_register
+i SpyGlass    SG.VIR2VE                VE 1150944 1150944  503032  431688       0         431688        8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:router_register
+i SpyGlass    SG.ELAB                  VV 1085392 1085392  437104  422712       0         422712    65944.0   65552 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.RTLSEMCHECK           VV 1150944 1150944  503048  431688       0         431688       24.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.HDL_SET_DU_ATTR       VV 1150944 1150944  501320  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    ElabSummary              VV 1150944 1150944  501320  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    DumpDesignFilesForVCS    VV 1150944 1150944  501328  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    ReportCheckDataSummary   VV 1150944 1150944  501328  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SG.BBEng                 VV 1150944 1150944  501328  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 sgAnalyzeBBOnElab:
+i SpyGlass    SG.SDEDATA(files)        VV 1150944 1150944  501336  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.SDEDATA(files_inactive) VV 1150944 1150944  501336  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.SDEDATA(span)         VV 1150944 1150944  501336  431688       0         431688        8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.SDEDATA(greybox)      VV 1150944 1150944  501344  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.WAIVE(StopModules)    VV 1150944 1150944  502952  431688       0         431688      -48.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.CACHEWAIVERS          VV 1150944 1150944  502904  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.AUTO_MIG_WAIVERS      VV 1150944 1150944  502904  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 ID:2
+i SpyGlass    SGDC_waive37             VV 1150944 1150944  502904  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLDULIST:5
+i SpyGlass    SG.HIERWAIVERS           VV 1150944 1150944  502904  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    DetectTopDesignUnits     VV 1150944 1150944  502904  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLALLDULIST:5
+i SpyGlass    SG.SGDCCHECK             VV 1150944 1150944  502976  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SGDC_testmode03          VV 1150944 1150944  502976  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SG.POST_PROCESS_CONSTR   VV 1150944 1150944  502976  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SG.DECOMPILE_SGDC        VV 1150944 1150944  502976  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 NONE:
+i SpyGlass    SGDC_memorywritepin04.Exit VV 1150944 1150944  502936  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLALLDULIST:
+i SpyGlass    SGDC_require_path03.Exit VV 1150944 1150944  502904  431688       0         431688       -8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_require_value03.Exit VV 1150944 1150944  502896  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_reset02.Exit        VV 1150944 1150944  502888  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLALLDULIST:
+i SpyGlass    SGDC_reset03.Exit        VV 1150944 1150944  502888  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLALLDULIST:
+i SpyGlass    SGDC_voltagedomain05.Exit VV 1150944 1150944  502808  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_voltagedomain06.Exit VV 1150944 1150944  502808  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_voltagedomain07.Exit VV 1150944 1150944  502808  431688       0         431688       -8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_powerdomainoutputs02.Exit VV 1150944 1150944  502800  431688       0         431688       -8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_supply01.Exit       VV 1150944 1150944  502792  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_fifo01.Exit         VV 1150944 1150944  502784  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_power_data01.Exit   VV 1150944 1150944  502752  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_ungroup01.Exit      VV 1150944 1150944  502752  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port06.Exit VV 1150944 1150944  502736  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port14.Exit VV 1150944 1150944  502736  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port15.Exit VV 1150944 1150944  502736  431688       0         431688       -8.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    SGDC_abstract_port18.Exit VV 1150944 1150944  502728  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 SETUP:
+i SpyGlass    ReportObsoletePragmas    VV 1150944 1150944  502728  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLALLDULIST:5
+i SpyGlass    HdlLibDuCheck            VV 1150944 1150944  502728  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLALLDULIST:5
+i SpyGlass    RtlDesignInfo            VV 1150944 1150944  502728  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLALLDULIST:5
+i lint        W339a                    VE 1150944 1150944  502728  431688       0         431688        0.0       0 1150944 1150944  431688       0    431688          431688          0.00         0.00 RTLDU:Router1x3
+i lint        W339a                    VE 1150944 1150944  502728  431688       0         431688        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDU:router_fifo_design
+i lint        W339a                    VE 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDU:router_fsm
+i lint        W339a                    VE 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDU:router_register
+i lint        W339a                    VE 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDU:router_synchronizer
+i SpyGlass    CheckCelldefine          VE 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i SpyGlass    SGDC_waive23             VV 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i SpyGlass    SGDC_waive26             VV 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i SpyGlass    SGDC_waive27             VV 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i SpyGlass    SGDC_waive29             VV 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W317                     VE 1150944 1150944  502728  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W422                     VE 1150944 1150944  502728  433144       0         433144        8.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W426                     VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W480                     VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W481a                    VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W481b                    VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W287b                    VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W421                     VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i morelint    Prereqs_CheckTimeUnitandPrecision-ML VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i starc2005   STARC05-2.3.1.5b         VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i starc2005   STARC05-2.3.3.1          VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 RTLDULIST:5
+i lint        W110                     VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W122                     VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W496a                    VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W496b                    VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W19                      VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W66                      VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W116                     VE 1150944 1150944  502736  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W123                     VE 1150944 1150944  502736  433144       0         433144       24.0       0 1150944 1150944  433144       0    433144          433144          0.01         0.00 ELABDU:Router1x3
+i lint        W156                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W215                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W216                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W218                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W224                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W263                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W289                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W337                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W416                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W352                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W362                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W415a                    VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W486                     VE 1150944 1150944  502760  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W499                     VE 1150944 1150944  502760  433144       0         433144        8.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W502                     VE 1150944 1150944  502768  433144       0         433144        0.0       0 1150944 1150944  433144       0    433144          433144          0.00         0.00 ELABDU:Router1x3
+i lint        W71                      VE 1150944 1150944  502768  433144       0         433144        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W240                     VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W287a                    VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W293                     VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W398                     VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W424                     VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W467                     VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W505                     VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W528                     VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        Prereqs_Usage            VE 1150944 1150944  502776  434668       0         434668      -16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i morelint    Prereqs_ReportPortInfo-ML VE 1150944 1150944  502760  434668       0         434668        8.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i morelint    NoAssignX-ML             VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i morelint    ParamWidthMismatch-ML    VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i morelint    Postreqs_Usage_ML        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i simulation  sim_race02               VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.1.3.1          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.10.1.4a        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.10.1.4b        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.1.4.5          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.1.5.3          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.2.3.3          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.3.1.6          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.10.2.3         VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.10.3.2a        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.11.3.1         VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W19.DUExit               VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W123.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W499.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W240.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W467.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W528.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i morelint    NoAssignX-ML.DUExit      VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i starc2005   STARC05-2.11.3.1.DUExit  VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:Router1x3
+i lint        W110                     VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W122                     VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W496a                    VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W496b                    VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W19                      VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W66                      VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W116                     VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W123                     VE 1150944 1150944  502768  434668       0         434668       16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W156                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W215                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W216                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W218                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W224                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W263                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W289                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W337                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W416                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W352                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W362                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W415a                    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W486                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W499                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W502                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W71                      VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W240                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W287a                    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W293                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W398                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W424                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W467                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W505                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W528                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        Prereqs_Usage            VE 1150944 1150944  502784  434668       0         434668      -16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i morelint    Prereqs_ReportPortInfo-ML VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i morelint    NoAssignX-ML             VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i morelint    ParamWidthMismatch-ML    VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i morelint    Postreqs_Usage_ML        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i simulation  sim_race02               VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.1.3.1          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.10.1.4a        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.10.1.4b        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.1.4.5          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.1.5.3          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.2.3.3          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.3.1.6          VE 1150944 1150944  502768  434668       0         434668        8.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.10.2.3         VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.10.3.2a        VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.11.3.1         VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W19.DUExit               VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W123.DUExit              VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W499.DUExit              VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W240.DUExit              VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W467.DUExit              VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W528.DUExit              VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i morelint    NoAssignX-ML.DUExit      VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i starc2005   STARC05-2.11.3.1.DUExit  VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fifo_design
+i lint        W110                     VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W122                     VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W496a                    VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W496b                    VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W19                      VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W66                      VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W116                     VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W123                     VE 1150944 1150944  502776  434668       0         434668       16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W156                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W215                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W216                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W218                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W224                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W263                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W289                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W337                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W416                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W352                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W362                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W415a                    VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W486                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W499                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W502                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W71                      VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.01         0.00 ELABDU:router_fsm
+i lint        W240                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W287a                    VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W293                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W398                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W424                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W467                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W505                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W528                     VE 1150944 1150944  502792  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        Prereqs_Usage            VE 1150944 1150944  502792  434668       0         434668      -16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i morelint    Prereqs_ReportPortInfo-ML VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i morelint    NoAssignX-ML             VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i morelint    ParamWidthMismatch-ML    VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i morelint    Postreqs_Usage_ML        VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i simulation  sim_race02               VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.1.3.1          VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.10.1.4a        VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.10.1.4b        VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.1.4.5          VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.1.5.3          VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.2.3.3          VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.3.1.6          VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.10.2.3         VE 1150944 1150944  502776  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.10.3.2a        VE 1150944 1150944  502776  434668       0         434668        8.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.11.3.1         VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W19.DUExit               VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W123.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W499.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W240.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W467.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W528.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i morelint    NoAssignX-ML.DUExit      VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i starc2005   STARC05-2.11.3.1.DUExit  VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_fsm
+i lint        W110                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W122                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W496a                    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W496b                    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W19                      VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W66                      VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W116                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W123                     VE 1150944 1150944  502784  434668       0         434668       16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W156                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W215                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W216                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W218                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W224                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W263                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W289                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W337                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W416                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W352                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W362                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W415a                    VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W486                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W499                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W502                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W71                      VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W240                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W287a                    VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W293                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W398                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W424                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W467                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W505                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W528                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        Prereqs_Usage            VE 1150944 1150944  502800  434668       0         434668      -16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i morelint    Prereqs_ReportPortInfo-ML VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i morelint    NoAssignX-ML             VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i morelint    ParamWidthMismatch-ML    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i morelint    Postreqs_Usage_ML        VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i simulation  sim_race02               VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.1.3.1          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.10.1.4a        VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.10.1.4b        VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.1.4.5          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.1.5.3          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.2.3.3          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.3.1.6          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.10.2.3         VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.10.3.2a        VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.11.3.1         VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W19.DUExit               VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W123.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W499.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W240.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W467.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W528.DUExit              VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i morelint    NoAssignX-ML.DUExit      VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i starc2005   STARC05-2.11.3.1.DUExit  VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_synchronizer
+i lint        W110                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W122                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W496a                    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W496b                    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W19                      VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W66                      VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W116                     VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W123                     VE 1150944 1150944  502784  434668       0         434668       16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W156                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W215                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W216                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W218                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W224                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W263                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W289                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W337                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W416                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W352                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W362                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W415a                    VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W486                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W499                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W502                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W71                      VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W240                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W287a                    VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W293                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W398                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W424                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W467                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W505                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W528                     VE 1150944 1150944  502800  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        Prereqs_Usage            VE 1150944 1150944  502800  434668       0         434668      -16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i morelint    Prereqs_ReportPortInfo-ML VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i morelint    NoAssignX-ML             VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i morelint    ParamWidthMismatch-ML    VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i morelint    Postreqs_Usage_ML        VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i simulation  sim_race02               VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.1.3.1          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.10.1.4a        VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.10.1.4b        VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.1.4.5          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.1.5.3          VE 1150944 1150944  502784  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.2.3.3          VE 1150944 1150944  502784  434668       0         434668      -16.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.3.1.6          VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.10.2.3         VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.10.3.2a        VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.11.3.1         VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W19.DUExit               VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W123.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W499.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W240.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W467.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i lint        W528.DUExit              VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i morelint    NoAssignX-ML.DUExit      VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i starc2005   STARC05-2.11.3.1.DUExit  VE 1150944 1150944  502768  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 ELABDU:router_register
+i SpyGlass    SG.LEXICAL(Read)         VE 1150944 1150944  502768  434668       0         434668      120.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 NONE:./../rtl/Router1x3.v
+i SpyGlass    SG.LEXICAL(FilterForDesign) VE 1150944 1150944  502888  434668       0         434668        0.0       0 1150944 1150944  434668       0    434668          434668          0.00         0.00 NONE:./../rtl/Router1x3.v
+i morelint    ReportPortInfo-ML        VV 1150944 1150944  502888  434668       0         434668        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 LEXICAL:./../rtl/Router1x3.v
+i SpyGlass    SG.LEXICAL(Delete)       VE 1150944 1150944  502888  436188       0         436188      -48.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/Router1x3.v
+i SpyGlass    SG.LEXICAL(Read)         VE 1150944 1150944  502840  436188       0         436188       32.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_fifo_design.v
+i SpyGlass    SG.LEXICAL(FilterForDesign) VE 1150944 1150944  502872  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_fifo_design.v
+i morelint    ReportPortInfo-ML        VV 1150944 1150944  502872  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 LEXICAL:./../rtl/router_fifo_design.v
+i SpyGlass    SG.LEXICAL(Delete)       VE 1150944 1150944  502872  436188       0         436188      -24.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_fifo_design.v
+i SpyGlass    SG.LEXICAL(Read)         VE 1150944 1150944  502848  436188       0         436188       40.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_fsm.v
+i SpyGlass    SG.LEXICAL(FilterForDesign) VE 1150944 1150944  502888  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_fsm.v
+i morelint    ReportPortInfo-ML        VV 1150944 1150944  502888  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 LEXICAL:./../rtl/router_fsm.v
+i SpyGlass    SG.LEXICAL(Delete)       VE 1150944 1150944  502888  436188       0         436188      -32.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_fsm.v
+i SpyGlass    SG.LEXICAL(Read)         VE 1150944 1150944  502856  436188       0         436188       24.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_register.v
+i SpyGlass    SG.LEXICAL(FilterForDesign) VE 1150944 1150944  502880  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_register.v
+i morelint    ReportPortInfo-ML        VV 1150944 1150944  502880  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 LEXICAL:./../rtl/router_register.v
+i SpyGlass    SG.LEXICAL(Delete)       VE 1150944 1150944  502880  436188       0         436188      -24.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_register.v
+i SpyGlass    SG.LEXICAL(Read)         VE 1150944 1150944  502856  436188       0         436188       32.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_synchronizer.v
+i SpyGlass    SG.LEXICAL(FilterForDesign) VE 1150944 1150944  502888  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_synchronizer.v
+i morelint    ReportPortInfo-ML        VV 1150944 1150944  502888  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 LEXICAL:./../rtl/router_synchronizer.v
+i SpyGlass    SG.LEXICAL(Delete)       VE 1150944 1150944  502888  436188       0         436188      -24.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:./../rtl/router_synchronizer.v
+i SpyGlass    SGDC_waive24             VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive25             VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive31             VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    SGDC_waive35             VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 RTLDULIST:5
+i SpyGlass    checkCMD_mthresh         VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    SG.SDECLEANUP            VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:
+i SpyGlass    AnalyzeBBox              VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    DetectTopDesignUnits.Exit VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 RTLALLDULIST:
+i SpyGlass    AnalyzeBBox.Exit         VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    ElabSummary.Exit         VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    sdc_init_rule.Exit       VV 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i lint        W110.Exit                VE 1150944 1150944  502864  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W122.Exit                VE 1150944 1150944  502864  436188       0         436188      -32.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W496a.Exit               VE 1150944 1150944  502832  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W66.Exit                 VE 1150944 1150944  502832  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W116.Exit                VE 1150944 1150944  502832  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W123.Exit                VE 1150944 1150944  502832  436188       0         436188      -32.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W156.Exit                VE 1150944 1150944  502800  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W215.Exit                VE 1150944 1150944  502800  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W216.Exit                VE 1150944 1150944  502800  436188       0         436188       -8.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W289.Exit                VE 1150944 1150944  502792  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W337.Exit                VE 1150944 1150944  502792  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W352.Exit                VE 1150944 1150944  502792  436188       0         436188       -8.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W362.Exit                VE 1150944 1150944  502784  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W415a.Exit               VE 1150944 1150944  502784  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W486.Exit                VE 1150944 1150944  502784  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W499.Exit                VE 1150944 1150944  502784  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W502.Exit                VE 1150944 1150944  502784  436188       0         436188      -32.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W116.Exit                VH 1150944 1150944  502752  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W122.Exit                VH 1150944 1150944  502752  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W123.Exit                VH 1150944 1150944  502752  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W240.Exit                VE 1150944 1150944  502752  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W240.Exit                VH 1150944 1150944  502752  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W287a.Exit               VE 1150944 1150944  502752  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W398.Exit                VE 1150944 1150944  502752  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W528.Exit                VE 1150944 1150944  502752  436188       0         436188    -1368.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        W528.Exit                VH 1150944 1150944  501384  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i lint        Prereqs_Usage.Exit       VE 1150944 1150944  501384  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i morelint    Prereqs_ConstantInput-ML.Exit VH 1150944 1150944  501384  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i morelint    ReportPortInfo-ML.Exit   VV 1150944 1150944  501384  436188       0         436188      -96.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 LEXICAL:
+i morelint    PragmaComments-ML.Exit   VH 1150944 1150944  501288  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 LEXICAL:
+i morelint    Prereqs_CheckTimeUnitandPrecision-ML.Exit VE 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 RTLDULIST:
+i morelint    Postreqs_Usage_ML.Exit   VE 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i morelint    NoXInCase-ML.Exit        VH 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i simulation  sim_race02.Exit          VE 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.1.3.1.Exit     VE 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.10.1.4a.Exit   VE 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.10.1.4b.Exit   VE 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.10.2.3.Exit    VE 1150944 1150944  501296  436188       0         436188       -8.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i starc2005   STARC05-2.10.3.2a.Exit   VE 1150944 1150944  501288  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 ELABDU:
+i SpyGlass    ReportCheckDataSummary   VV 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 SETUP:
+i SpyGlass    SG.SDEDATA(childElab)    VV 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:
+i SpyGlass    SG.MM.MERGE              VV 1150944 1150944  501296  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:(null)
+i SpyGlass    SG.MESSAGETAG            VV 1150944 1150944  501048  436188       0         436188       16.0       0 1150944 1150944  436188       0    436188          436188          0.01         0.01 NONE:
+i SpyGlass    SG.SMDB.DUID(restore)    VV 1150944 1150944  501064  436188       0         436188       16.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:(null)
+i SpyGlass    SG.SMDB.DUID(update)     VV 1150944 1150944  501080  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:(null)
+i SpyGlass    SG.DeferredWrite(PendingWriters) VV 1150944 1150944  501080  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:
+i SpyGlass    SG.ATTRDUMP              VV 1150944 1150944  501080  436188       0         436188        0.0       0 1150944 1150944  436188       0    436188          436188          0.00         0.00 NONE:
+
+
+
+#
+# Table II: Cumulative memory and time data for events
+##
+## Short explanation of different columns follows:
+## ---------------------------------------------------------------------
+## Cumulative Mem        --> total memory(in KB) consumed by <Event>
+## CumulativeCpuTime     --> total cpu time(in seconds) taken by <Event>
+## CumulativeClkTime     --> total elapsed time(in seconds) taken by <Event>
+## ---------------------------------------------------------------------
+##
+## Description: All the rows of Table-II begin with a 'c' so that scripts
+##       can filter the cumulative table data and distinguish
+##       them from the data of Table-I.
+##
+##       This table is sorted on the basis of 'CumulativeCpuTime'.
+##
+##       The entries for which 'CumulativeMem', 'CumulativeCpuTime' and 'CumulativeClkTime'
+##       are zero, do not appear in this table.
+##
+## Sample unix command:
+##       -> To get top 10 highest cumulative time events
+##      prompt> grep "^c " spyglass.perflog | sort -rn -k 5 | head -10
+##
+##
+#-------------------------------------------------------------------------------------------#
+#Policy     Event                  CumulativeMem  CumulativeCpuTime   CumulativeClkTime  Type
+#-------------------------------------------------------------------------------------------#
+c SpyGlass    SG.PERL.Init                71952.0            1.72                 1.58  ID
+c SpyGlass    SG.COPYRULES                17584.0            0.25                 0.26  NONE
+c SpyGlass    SG.HDLPARSE                 65624.0            0.01                 0.00  NONE
+c SpyGlass    SG.MESSAGETAG                  16.0            0.01                 0.01  NONE
+c lint        W123                           88.0            0.01                 0.00  ELABDU
+c lint        W71                             0.0            0.01                 0.00  ELABDU
+c SpyGlass    SG.ELAB                     65944.0            0.00                 0.00  NONE
+c SpyGlass    SG.SGOM                      2368.0            0.00                 0.00  NONE
+c lint        W528.Init                    1992.0            0.00                 0.00  ELABDU
+c lint        W528.Exit                   -1368.0            0.00                 0.00  ELABDU
+c SpyGlass    SG.SETVCSLIB                  744.0            0.00                 0.00  NONE
+c SpyGlass    SG.LEXICAL(Read)              248.0            0.00                 0.00  NONE
+c SpyGlass    SG.LEXICAL(Delete)           -152.0            0.00                 0.00  NONE
+c SpyGlass    SG.VIRLOAD                    136.0            0.00                 0.00  NONE
+c morelint    ReportPortInfo-ML.Init         96.0            0.00                 0.00  LEXICAL
+c morelint    ReportPortInfo-ML.Exit        -96.0            0.00                 0.00  LEXICAL
+c SpyGlass    sdc_init_rule                  80.0            0.00                 0.00  SETUP
+c lint        Prereqs_Usage                 -80.0            0.00                 0.00  ELABDU
+c SpyGlass    SG.WAIVE(StopModules)         -48.0            0.00                 0.00  NONE
+c SpyGlass    GenerateConfMap.Init           32.0            0.00                 0.00  RTLALLDULIST
+c SpyGlass    SGDC_require_path03.Init       32.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_require_value03.Init      -32.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_abstract_port18.Init      -32.0            0.00                 0.00  SETUP
+c SpyGlass    STX_VH_437.Init                32.0            0.00                 0.00  SETUP
+c SpyGlass    sdc_init_rule.Init             32.0            0.00                 0.00  SETUP
+c lint        W122.Init                      32.0            0.00                 0.00  ELABDU
+c lint        W123.Init                      32.0            0.00                 0.00  ELABDU
+c lint        W502.Init                      32.0            0.00                 0.00  ELABDU
+c SpyGlass    SGDC_sdcschema02               32.0            0.00                 0.00  SETUP
+c SpyGlass    SG.VIR2VE                      32.0            0.00                 0.00  NONE
+c lint        W122.Exit                     -32.0            0.00                 0.00  ELABDU
+c lint        W123.Exit                     -32.0            0.00                 0.00  ELABDU
+c lint        W502.Exit                     -32.0            0.00                 0.00  ELABDU
+c SpyGlass    SGDC_memorywritepin04.Init      -24.0            0.00                 0.00  RTLALLDULIST
+c SpyGlass    SG.RTLSEMCHECK                 24.0            0.00                 0.00  NONE
+c SpyGlass    InfoAnalyzeBBox.Init           16.0            0.00                 0.00  SETUP
+c SpyGlass    InfoSglibVersionSummary.Init       16.0            0.00                 0.00  SETUP
+c SpyGlass    HdlLibDuCheck_01.Init          16.0            0.00                 0.00  SETUP
+c starc2005   STARC05-2.2.3.3.Init           16.0            0.00                 0.00  ELABDU
+c starc2005   STARC05-2.2.3.3               -16.0            0.00                 0.00  ELABDU
+c SpyGlass    SG.SMDB.DUID(restore)          16.0            0.00                 0.00  NONE
+c SpyGlass    SGDC_reset02.Init               8.0            0.00                 0.00  RTLALLDULIST
+c SpyGlass    SGDC_voltagedomain05.Init        8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_voltagedomain07.Init        8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_powerdomainoutputs02.Init        8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_fifo01.Init                8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_power_data01.Init          8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_abstract_port06.Init        8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_abstract_port15.Init        8.0            0.00                 0.00  SETUP
+c lint        W215.Init                       8.0            0.00                 0.00  ELABDU
+c lint        W289.Init                       8.0            0.00                 0.00  ELABDU
+c morelint    PragmaComments-ML.Init          8.0            0.00                 0.00  LEXICAL
+c starc2005   STARC05-2.10.1.4b.Init          8.0            0.00                 0.00  ELABDU
+c SpyGlass    SG.SDEDATA(span)                8.0            0.00                 0.00  NONE
+c SpyGlass    SGDC_require_path03.Exit       -8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_voltagedomain07.Exit       -8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_powerdomainoutputs02.Exit       -8.0            0.00                 0.00  SETUP
+c SpyGlass    SGDC_abstract_port15.Exit       -8.0            0.00                 0.00  SETUP
+c lint        W422                            8.0            0.00                 0.00  RTLDULIST
+c lint        W499                            8.0            0.00                 0.00  ELABDU
+c morelint    Prereqs_ReportPortInfo-ML        8.0            0.00                 0.00  ELABDU
+c starc2005   STARC05-2.3.1.6                 8.0            0.00                 0.00  ELABDU
+c starc2005   STARC05-2.10.3.2a               8.0            0.00                 0.00  ELABDU
+c lint        W216.Exit                      -8.0            0.00                 0.00  ELABDU
+c lint        W352.Exit                      -8.0            0.00                 0.00  ELABDU
+c starc2005   STARC05-2.10.2.3.Exit          -8.0            0.00                 0.00  ELABDU
+c SpyGlass    ReportRuleNotRun                0.0            0.00                 0.01  SETUP
+##End of Table II entries
+
+i SpyGlass    SG.FREEJAGMEM            VH 1150980 1150944  432048  438012       0         438012    -1224.0       0 1150944 1150980  438012       0    438012          438012          0.00         0.00 NONE:
+i SpyGlass    SG.PERL.Exit             VV 1150980 1150944  424400  -50520.0  -33220 1117724 1150980          0.04         0.03 ID:2
+i SpyGlass    SG.AUTO_MIG.Exit         VV 1150980 1117724  373192   -1320.0       0 1117724 1150980          0.00         0.00 ID:2
+i SpyGlass    SG.PERL.Exit             VV 1150980 1117724  371872       0.0       0 1117724 1150980          0.00         0.00 ID:2
+i SpyGlass    SG.AUTO_MIG.Exit         VV 1150980 1117724  371872       0.0       0 1117724 1150980          0.00         0.00 ID:2

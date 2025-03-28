@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Sahil/Desktop/Maven/Project/Synchronizer/simulation/modelsim
+vrouter_synchronizer
+!s110 1732432060
+!i10b 1
+!s100 K2=lA46lPL0H2MhFIQHG<2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5ZVIJX<l]SP8?2Pbann:62
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1732382027
+8C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer.v
+FC:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer.v
+!i122 0
+L0 1 153
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1732432060.000000
+!s107 C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sahil/Desktop/Maven/Project/Synchronizer|C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Sahil/Desktop/Maven/Project/Synchronizer
+Z7 tCvgOpt 0
+vrouter_synchronizer_tb
+!s110 1732432061
+!i10b 1
+!s100 P46ACf?R>lPo3i?@Gl>T42
+R1
+INRUYKiEXDdk;YXV`SIdWB0
+R2
+R0
+w1732381765
+8C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v
+FC:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v
+!i122 1
+L0 1 97
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sahil/Desktop/Maven/Project/Synchronizer|C:/Users/Sahil/Desktop/Maven/Project/Synchronizer/router_synchronizer_tb.v|
+!i113 1
+R5
+R6
+R7

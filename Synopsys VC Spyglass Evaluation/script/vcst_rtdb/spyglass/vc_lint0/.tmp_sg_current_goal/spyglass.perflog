@@ -1,0 +1,71 @@
+##perflog_version  : 1.0
+##spyglass_version : SpyGlass_vT-2022.06 (May 30 2022)
+#
+##system   : Linux mavenserver-RH3 4.18.0-553.44.1.el8_10.x86_64 #1 SMP Wed Mar 5 10:48:41 EST 2025 x86_64
+##cwd    : /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script
+##args   : -mSpyGlass::Compatibility::v2_7_3 \
+             -top 'Router1x3' \
+             -rules='STARC05-2.10.1.4b,STARC05-2.10.1.4a,STARC05-2.3.1.2c,STARC05-2.1.3.1,STARC05-2.1.6.5,STARC05-2.11.3.1,STARC05-2.3.3.1,STARC05-2.10.3.2a,STARC05-2.10.2.3,STARC05-2.3.1.6,STARC05-2.3.1.5b,STARC05-2.2.3.3,STARC05-2.1.5.3,STARC05-2.1.4.5,sim_race02,NoXInCase-ML,ParamWidthMismatch-ML,NoAssignX-ML,PragmaComments-ML,ReportPortInfo-ML,W528,W505,W467,W424,W421,W398,W293,W287b,W287a,W240,W71,W110a,mixedsenselist,W416,W292,W156,W123,W122,W116,W422,W502,W499,W486,W481b,W481a,W480,W426,W415a,W362,W352,W337,W317,W289,W263,W224,W218,W216,W215,W66,W19,W496b,W496a,W110,bothedges,badimplicitSM4,badimplicitSM2,badimplicitSM1,W442f,W442c,W442b,W442a,W339a' \
+             -wdir '/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/.tmp_sg_current_goal' \
+             -mixed \
+             -policy='lint,morelint,simulation,starc2005' \
+             -templatedir '/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass' \
+             --template_info 'VC_GOAL0' \
+             -suppress_verilog_rules 'W505,W467,W424,W293,W422,W481b,W481a,W426,W289,W218,W216,W215,W66,bothedges,badimplicitSM4,badimplicitSM2,badimplicitSM1,W442f,W442c,W442b,W442a' \
+             -ignoreModuleInstance=yes \
+             -check_static_value=no \
+             -checkfullbus=W240,W528 \
+             -checkfullrecord=W123,W240,W528 \
+             -checkfullstruct=no \
+             -disable_rtl_deadcode=no \
+             -filter_mark_open=no \
+             -handle_shift_op=no \
+             -no_strict=no \
+             -nocheckoverflow='STARC05-2.1.3.1,STARC05-2.10.3.2a,W110,W116,W263,W362,W416,W486' \
+             -report_only_from_one_hierarchy=no \
+             -strict=no \
+             -use_lrm_width=no \
+             -64bit 
+#
+## Table-I : Incremental memory and time data for individual events
+## Short explanation of different columns follows:
+## -----------------------------------------------
+## Policy              --> name of the policy
+## Event               --> mostly it's a rule, but in some of the cases it may refer
+##                         to a particular event. e.g., SGOM population
+## Lang                --> language corresponding to <Event>
+##                   [VV=mixed VE=verilog VH=vhdl]
+## StartPeak           --> peak memory(in KB) at the start of the <Event>
+## StartHeap           --> cumulative heap memory(in KB) at the start of the <Event>
+## StartMem            --> cumulative memory(in KB) at the start of the <Event>
+## StartRSS            --> cumulative RSS/RAM memory(in KB) at the start of the <Event>
+## StartSwap           --> cumulative Swap memory(in KB) at the start of the <Event>
+## StartPeakRSS        --> Peak RSS/RAM memory(in KB) at the start of the <Event>
+## IncrMem             --> memory(in KB) consumed by <Event>
+## IncrHeap            --> increase in peak memory(in KB) during <Event>
+## EndHeap             --> cumulative heap memory(in KB) at the end of the <Event>
+## EndPeak             --> peak memory(in KB) at the end of the <Event>
+## EndRSS              --> cumulative RSS/RAM memory(in KB) at the end of the <Event>
+## EndSwap             --> cumulative Swap memory(in KB) at the end of the <Event>
+## EndPeakRSS          --> Peak RSS/RAM memory(in KB) at the end of the <Event>
+## EndPeakRSS+EndSwap  --> Peak RSS/RAM + Swap memory(in KB) at the end of the <Event>
+## IncrCpuTime    --> cpu time(in seconds) taken by <Event>
+## IncrClkTime    --> the elapsed time (in seconds) taken by <Event>
+## Type           --> if <Event> is a rule, then it denotes 'rule-type',
+##                   else it is 'NONE'
+## Msg            --> mostly it'll be name of the design unit, sometimes it
+##                   may denote number of design units present in the design
+##
+## Description: All the rows of Table-I begin with a 'i ' so that scripts
+##       can filter the incremental table data and distinguish
+##       them from the data of Table-II.
+##
+## Please note that some entries of Table-I can come after Table-II entries
+## You can distinguish it with the rows begin with a 'i ' 
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+#Policy     Event               Lang  StartPeak StartHeap StartMem StartRSS StartSwap StartPeakRSS  IncrMem  IncrHeap EndHeap EndPeak EndRSS EndSwap EndPeakRSS EndPeakRSS+EndSwap  IncrCpuTime  IncrClkTime Type:Msg #
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+i SpyGlass    SG.COPYRULES             VV  830972  830972  193112  359344       0         359344    17568.0   19008  849980  849980  378352       0    378352          378352          0.23         0.23 NONE:
+i SpyGlass    SG.PERL.Init             VV  735540  735540  131992  283256       0         283256    78688.0  114440  849980  849980  378352       0    378352          378352          1.53         1.45 ID:2
+i SpyGlass    SG.PERL.Exit             VV  849980  849980  210952  378352       0         378352   -54568.0  -29032  820948  849980  364980       0    378352          378352          0.02         0.03 ID:2
+i SpyGlass    SG.AUTO_MIG.Exit         VV  849980  820948  156096  364980       0         378352     -120.0       0  820948  849980  364980       0    378352          378352          0.00         0.00 ID:2

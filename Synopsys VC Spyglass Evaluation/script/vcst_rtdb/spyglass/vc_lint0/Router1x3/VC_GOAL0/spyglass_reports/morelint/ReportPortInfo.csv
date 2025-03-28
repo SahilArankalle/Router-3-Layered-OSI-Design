@@ -1,0 +1,16 @@
+Module Name,Module Type,Port Name,Direction,Width,Index,Comment Source,Comment 
+Router1x3,Top_Level,clk,INPUT,1,-,-,-
+Router1x3,Top_Level,resetn,INPUT,1,-,-,-
+Router1x3,Top_Level,read_enb_0,INPUT,1,-,-,-
+Router1x3,Top_Level,read_enb_1,INPUT,1,-,-,-
+Router1x3,Top_Level,read_enb_2,INPUT,1,-,-,-
+Router1x3,Top_Level,pkt_valid,INPUT,1,-,-,-
+Router1x3,Top_Level,data_in,INPUT,8,[7:0],-,-
+Router1x3,Top_Level,vld_out_0,OUTPUT,1,-,-,-
+Router1x3,Top_Level,vld_out_1,OUTPUT,1,-,-,-
+Router1x3,Top_Level,vld_out_2,OUTPUT,1,-,-,-
+Router1x3,Top_Level,err,OUTPUT,1,-,-,-
+Router1x3,Top_Level,busy,OUTPUT,1,-,-,-
+Router1x3,Top_Level,data_out_0,OUTPUT,8,[7:0],-,-
+Router1x3,Top_Level,data_out_1,OUTPUT,8,[7:0],-,-
+Router1x3,Top_Level,data_out_2,OUTPUT,8,[7:0],-,-

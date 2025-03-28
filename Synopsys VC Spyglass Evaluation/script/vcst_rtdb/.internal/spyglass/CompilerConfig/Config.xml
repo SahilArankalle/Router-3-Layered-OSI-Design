@@ -1,0 +1,26 @@
+<SVI>
+<SVI_SPYGLASS_UC>
+	<option data="enableRule=BlockHeader"/>
+	<option data="enableRule=CheckDelayTimescale-ML"/>
+	<option data="enableRule=InferLatch"/>
+	<option data="enableRule=PragmaComments-ML"/>
+	<option data="enableRule=STARC05-2.3.4.1v"/>
+	<option data="enableRule=STARC05-2.5.1.7"/>
+	<option data="enableRule=STARC05-2.5.1.9"/>
+	<option data="enableRule=W336"/>
+	<option data="enableRule=W414"/>
+	<option data="enableRule=W421"/>
+	<option data="enableRule=W450L"/>
+	<option data="enableRule=LibNameOfTopModule"/>
+	<option data="setRuleParameter=InferLatch(STRICT)=no"/>
+	<option data="setRuleParameter=PragmaComments-ML(ATTACH_VIOLATION_TAG)=no"/>
+	<option data="setRuleParameter=PragmaComments-ML(PRAGMA_LIST_ML)=synopsys"/>
+	<option data="setRuleParameter=W336(CHECK_TEMPORARY_FLOP)=0"/>
+	<option data="setRuleParameter=W336(FAST)=no"/>
+	<option data="setRuleParameter=W336(IGNORECELLNAME)="/>
+	<option data="setRuleParameter=W336(IGNORE_LOCAL_VARIABLES)=0"/>
+	<option data="setRuleParameter=W336(TREAT_LATCH_AS_COMBINATIONAL)=yes"/>
+	<option data="setRuleParameter=W414(FAST)=no"/>
+	<option data="setRuleParameter=W414(TREAT_LATCH_AS_COMBINATIONAL)=yes"/>
+</SVI_SPYGLASS_UC>
+</SVI>

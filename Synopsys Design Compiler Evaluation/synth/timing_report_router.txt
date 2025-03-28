@@ -1,0 +1,43 @@
+Information: Building the design 'router_fifo_design'. (HDL-193)
+Warning: Cannot find the design 'router_fifo_design' in the library 'WORK'. (LBR-1)
+Information: Building the design 'router_fsm'. (HDL-193)
+Warning: Cannot find the design 'router_fsm' in the library 'WORK'. (LBR-1)
+Information: Building the design 'router_synchronizer'. (HDL-193)
+Warning: Cannot find the design 'router_synchronizer' in the library 'WORK'. (LBR-1)
+Information: Building the design 'router_register'. (HDL-193)
+Warning: Cannot find the design 'router_register' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'router_fifo_design' in 'Router1x3'. (LINK-5)
+Warning: Unable to resolve reference 'router_fsm' in 'Router1x3'. (LINK-5)
+Warning: Unable to resolve reference 'router_synchronizer' in 'Router1x3'. (LINK-5)
+Warning: Unable to resolve reference 'router_register' in 'Router1x3'. (LINK-5)
+Warning: Design 'Router1x3' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Router1x3
+Version: T-2022.03-SP4
+Date   : Fri Mar 28 13:51:42 2025
+****************************************
+
+Operating Conditions: nom_pvt   Library: lsi_10k
+Wire Load Model Mode: top
+
+  Startpoint: SYNCHRONIZER/vld_out_0 (internal pin)
+  Endpoint: vld_out_0 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  SYNCHRONIZER/vld_out_0 (router_synchronizer)            0.00       0.00 r
+  vld_out_0 (out)                                         0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

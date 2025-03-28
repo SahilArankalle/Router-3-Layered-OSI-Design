@@ -1,0 +1,56 @@
+###############################################################
+ # This report contains names of design units along with parameter
+ # values and self instances.
+ # Some parameters may have more than one possible values for that
+ # design unit, values will be unique for instances. It is indicated as
+ # "Multiple Values".
+ # In some cases instance count shown may be less than actual instance
+ # count in the design due to optimizations. It is indicated as
+ # "Optimized".
+###############################################################
+
+
+Design Unit Name: 'Router1x3', (./../rtl/Router1x3.v:1)
+    Parameters (Total 0)
+    Instances (Total: 0)
+=============================================
+
+
+Design Unit Name: 'router_fifo_design', (./../rtl/router_fifo_design.v:1)
+    Parameters (Total 0)
+    Instances (Total 3)(Optimized)
+        Router1x3/FIFO_0
+        Router1x3/FIFO_1
+        Router1x3/FIFO_2
+=============================================
+
+
+Design Unit Name: 'router_fsm', (./../rtl/router_fsm.v:1)
+    Parameters (Total 8)
+        DECODE_ADDRESS = 3'b000  (default: 3'b000)
+        LOAD_FIRST_DATA = 3'b001  (default: 3'b001)
+        WAIT_TILL_EMPTY = 3'b010  (default: 3'b010)
+        LOAD_DATA = 3'b011  (default: 3'b011)
+        LOAD_PARITY = 3'b100  (default: 3'b100)
+        FIFO_FULL_STATE = 3'b101  (default: 3'b101)
+        LOAD_AFTER_FULL = 3'b110  (default: 3'b110)
+        CHECK_PARITY_ERROR = 3'b111  (default: 3'b111)
+    Instances (Total 1)(Optimized)
+        Router1x3/FSM
+=============================================
+
+
+Design Unit Name: 'router_synchronizer', (./../rtl/router_synchronizer.v:1)
+    Parameters (Total 0)
+    Instances (Total 1)(Optimized)
+        Router1x3/SYNCHRONIZER
+=============================================
+
+
+Design Unit Name: 'router_register', (./../rtl/router_register.v:1)
+    Parameters (Total 0)
+    Instances (Total 1)(Optimized)
+        Router1x3/REGISTER
+=============================================
+
+

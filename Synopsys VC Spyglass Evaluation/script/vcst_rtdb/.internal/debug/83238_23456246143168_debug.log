@@ -1,0 +1,75 @@
+(2025-03-28 14:02:01),0.000534701,0,start,964.867,13,LicenseMgr Init : 
+(2025-03-28 14:02:01),0.0135095,0,end,971.594,14,LicenseMgr Init : 
+(2025-03-28 14:02:04),0.0519547,0,start,1442.57,376,SQL_DB_Save_Main
+(2025-03-28 14:02:04),0.0522153,0,end,1442.57,376,SQL_DB_Save_Main
+(2025-03-28 14:02:04),0.063628,0,start,1442.57,376,SQL_DB_Save_Main
+(2025-03-28 14:02:04),0.0638962,0,end,1442.57,376,SQL_DB_Save_Main
+(2025-03-28 14:02:06),0.0926689,0,start,1442.57,379,Analyze 
+(2025-03-28 14:02:07),0.103664,0,end,1442.57,379,Analyze 
+(2025-03-28 14:02:07),0.103664,0,start,1442.57,379,Load VCS Message: 
+(2025-03-28 14:02:07),0.103667,0,end,1442.57,379,Load VCS Message: 
+(2025-03-28 14:02:07),0.108624,0,start,1442.57,386,Elaborate : 
+(2025-03-28 14:02:10),0.159543,0,end,1442.57,388,Elaborate : 
+(2025-03-28 14:02:10),0.159545,0,start,1442.57,388,Load VCS Message: 
+(2025-03-28 14:02:10),0.159802,0,end,1442.57,388,Load VCS Message: 
+(2025-03-28 14:02:10),0.159803,0,start,1442.57,388,LoadCircuitModel : 
+(2025-03-28 14:02:10),0.159833,0,start,1442.57,388,VsiLib_Restore : 
+(2025-03-28 14:02:10),0.159834,0,end,1442.57,388,VsiLib_Restore : 
+(2025-03-28 14:02:10),0.159834,0,end,1442.57,388,LoadCircuitModel : 
+(2025-03-28 14:02:10),0.159835,0,start,1442.57,388,BuildNetlist : 
+(2025-03-28 14:02:10),0.159836,0,start,1442.57,388,NLDM Build : 
+(2025-03-28 14:02:10),0.159943,0,end,1442.57,402,NLDM Build : 
+(2025-03-28 14:02:10),0.159945,1,start,1442.57,402,Cell properties : 
+(2025-03-28 14:02:10),0.159946,1,end,1442.57,402,Cell properties : 
+(2025-03-28 14:02:10),0.159947,0,end,1442.57,402,BuildNetlist : 
+(2025-03-28 14:02:10),0.16,0,start,1442.57,402,populate SSF data: 
+(2025-03-28 14:02:10),0.160001,0,end,1442.57,402,populate SSF data: 
+(2025-03-28 14:02:10),0.160001,0,start,1442.57,402,DumpGateCountStats : 
+(2025-03-28 14:02:10),0.160005,0,end,1442.57,402,DumpGateCountStats : 
+(2025-03-28 14:02:10),0.160006,0,start,1442.57,402,RunReductionEngine : 
+(2025-03-28 14:02:10),0.160061,1,start,1442.57,411,BlockEnginePropagation : 
+(2025-03-28 14:02:10),0.160081,1,end,1442.57,411,BlockEnginePropagation : 
+(2025-03-28 14:02:10),0.160083,0,end,1442.57,411,RunReductionEngine : 
+(2025-03-28 14:02:10),0.160084,1,start,1442.57,411,ModuleDesignPropagation : 
+(2025-03-28 14:02:10),0.160085,1,end,1442.57,411,ModuleDesignPropagation : 
+(2025-03-28 14:02:10),0.160103,0,start,1442.57,412,Mdm2Nschema : 
+(2025-03-28 14:02:10),0.160614,0,start,1464.84,416,Infer Setup : 
+(2025-03-28 14:02:10),0.160615,1,start,1464.84,416,_nameToNet Map clear : 
+(2025-03-28 14:02:10),0.160616,1,end,1464.84,416,_nameToNet Map clear : 
+(2025-03-28 14:02:10),0.160617,1,start,1464.84,416,ConstantPropagation : 
+(2025-03-28 14:02:10),0.160617,1,start,1464.84,416,UserConstantPropagation : 
+(2025-03-28 14:02:10),0.160618,1,end,1464.84,416,UserConstantPropagation : 
+(2025-03-28 14:02:10),0.160618,1,start,1464.84,416,DynamicUserCasePropagation : 
+(2025-03-28 14:02:10),0.160619,1,end,1464.84,416,DynamicUserCasePropagation : 
+(2025-03-28 14:02:10),0.16062,1,start,1464.84,416,DesignConstantPropagation : 
+(2025-03-28 14:02:10),0.160637,1,end,1464.84,416,DesignConstantPropagation : 
+(2025-03-28 14:02:10),0.160637,1,start,1464.84,416,HybridSeqPropagation : 
+(2025-03-28 14:02:10),0.160638,1,end,1464.84,416,HybridSeqPropagation : 
+(2025-03-28 14:02:10),0.160639,1,start,1464.84,416,ReverseConstPropagationOnBiDir: 
+(2025-03-28 14:02:10),0.160639,1,end,1464.84,416,ReverseConstPropagationOnBiDir: 
+(2025-03-28 14:02:10),0.16064,1,end,1464.84,416,ConstantPropagation : 
+(2025-03-28 14:02:10),0.160641,0,start,1464.84,416,populateInfoToView : 
+(2025-03-28 14:02:10),0.160641,0,end,1464.84,416,populateInfoToView : 
+(2025-03-28 14:02:10),0.160656,0,end,1464.84,417,Infer Setup : 
+(2025-03-28 14:02:10),0.160662,0,start,1464.84,417,Infer Setup : 
+(2025-03-28 14:02:10),0.160664,0,end,1464.84,417,Infer Setup : 
+(2025-03-28 14:02:10),0.160667,0,start,1464.84,417,evaluateGenClocksForBlockedPaths: 
+(2025-03-28 14:02:10),0.160668,0,end,1464.84,417,evaluateGenClocksForBlockedPaths: 
+(2025-03-28 14:02:14),0.225042,0,start,1507.36,419,SQL Mem : CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:14),0.225043,0,end,1507.36,419,SQL Mem : CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:14),0.229039,0,start,1509.89,419,SQL Mem : CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:14),0.22904,0,end,1509.89,419,SQL Mem : CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:14),0.229041,0,start,1509.89,419,SQL Mem : CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:14),0.229041,0,end,1509.89,419,SQL Mem : CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:14),0.22905,0,start,1509.89,419,SQL Index (add_index) :CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:14),0.229054,0,end,1509.89,419,SQL Index (add_index) :CurrMem: 22 mb, PeakMem: 24 mb 
+(2025-03-28 14:02:15),0.241656,0,start,1509.89,419,ApplyPendingWaiver
+(2025-03-28 14:02:15),0.241659,0,end,1509.89,419,ApplyPendingWaiver
+(2025-03-28 14:02:15),0.242055,0,start,1509.89,427,PragmaWaiverGen: 
+(2025-03-28 14:02:15),0.242055,0,start,1509.89,427,PragmaWaiverUsingViol : 
+(2025-03-28 14:02:15),0.242059,0,end,1509.89,427,PragmaWaiverUsingViol : 
+(2025-03-28 14:02:15),0.24206,0,end,1509.89,427,PragmaWaiverGen: 
+(2025-03-28 14:02:15),0.242061,0,start,1509.89,427,PragmaWaiverApply: 
+(2025-03-28 14:02:15),0.242888,0,start,1509.89,427,generatePragmaWaiverCommands: 
+(2025-03-28 14:02:15),0.242888,0,end,1509.89,427,generatePragmaWaiverCommands: 
+(2025-03-28 14:02:15),0.242889,0,end,1509.89,427,PragmaWaiverApply: 

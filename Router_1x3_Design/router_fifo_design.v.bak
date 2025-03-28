@@ -1,0 +1,76 @@
+module router_fifo_design(
+input clk;
+input resetn;
+input write_enb;
+input soft_reset;
+input read_enb;
+input [7:0] data_in;
+input lfd_state;
+output empty;
+output full;
+output reg [7:0] data_out;
+);
+
+reg [4:0] rd_ptr, wr_ptr;
+reg lfd_state_s;
+reg [6:0] count;
+
+
+//lfd_State from fsm delay by 1clk cycle
+always @ (posedge clk)
+	begin
+		if(!resetn)
+			lfd_state_s <= 0;
+		else
+			lfd_state_s <= lfd_state;
+	end
+	
+//rtl schematic of internal counter for FIFO down counting
+   
+	
+always @ (posedge clk)
+	begin
+	if(!resetn)
+		count <= 7'h0;
+	else if(soft_reset)
+		count <= 0;
+	else if (read_enb && ~empty)
+	begin
+		if(mem[rd_ptr[3:0]][8] == 1)
+			count <= mem[rd_ptr[3:0]][7:2] + 5'h1;
+		else if(count != 0)
+			count <= count - 7'h1;
+	end
+	
+//rtl schematic - read logic
+
+
+always @ (posedge clk)
+	begin
+	if (!resetn)
+		data_out <= 8'h0;
+	else if (soft_reset)
+		data_out <= 8'hz;
+	else if(count == 0 && data_out != 0)
+		data_out <= 8'hz;
+	else if(read_enb && ~empty)
+		data_out <= mem[rd_ptr[3:0]];
+	end
+	
+//rst schematic - write logic
+
+
+always @ (posedge clk)
+	begin
+	if(!resetn)
+		mem[wr_ptr[3:0]] <= 8'h0;
+	else if (soft_reset)
+		mem[wr_ptr[3:0]] <= 8'h0;
+	else if (write_enb && !full)
+		mem[wr_ptr[3:0]] = {lfd_state,data_in};
+	end
+	
+
+	
+	
+	

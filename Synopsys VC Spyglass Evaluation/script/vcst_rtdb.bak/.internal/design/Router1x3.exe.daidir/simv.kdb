@@ -1,0 +1,19 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script
+VCS_HOME=/home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/vcs-mx
+VERDI_HOME=/home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/verdi
+SystemC=FALSE
+UUM=TRUE
+KDB=TRUE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+ENV="SYNOPSYS_SIM_SETUP=/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/synopsys_sim.setup" 
+TOP=Router1x3 
+ELAB=TRUE
+COMMON_ELAB=TRUE
+SIMV_WRAPPER=FALSE
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a

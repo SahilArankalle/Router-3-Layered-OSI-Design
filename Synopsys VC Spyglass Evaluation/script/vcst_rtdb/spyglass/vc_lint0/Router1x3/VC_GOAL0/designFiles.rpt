@@ -1,0 +1,5 @@
+./../rtl/Router1x3.v
+./../rtl/router_fifo_design.v
+./../rtl/router_fsm.v
+./../rtl/router_register.v
+./../rtl/router_synchronizer.v

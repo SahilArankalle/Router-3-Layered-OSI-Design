@@ -1,0 +1,29 @@
+BEGIN_VIOLATION
+	RULENAME:LibNameOfTopModule
+	FILE_NAME:./../rtl/Router1x3.v
+	LINE_NUMBER:1
+	MESSAGELABEL:LibNameOfTopModule_ve
+	%1(LIBNAME):DEFAULT
+END_VIOLATION
+
+BEGIN_VIOLATION
+	RULENAME:STARC05-2.5.1.7
+	FILE_NAME:./../rtl/router_fifo_design.v
+	LINE_NUMBER:56
+	MESSAGELABEL:STARC02-2.5.1.7_ve
+	MODULE:router_fifo_design
+	ERROR_TYPE:cmdModule
+	SIGNAL:data_out
+END_VIOLATION
+
+BEGIN_VIOLATION
+	RULENAME:W336
+	FILE_NAME:./../rtl/router_fifo_design.v
+	LINE_NUMBER:72
+	MESSAGELABEL:LINT_W336_WRN
+	ERROR_TYPE:cmdModule
+	MODULE:router_fifo_design
+	HDL_STATEMENT:mem[wr_ptr[3:0]] = {lfd_state, data_in};
+	NODE_NAME:FlipFlop
+END_VIOLATION
+

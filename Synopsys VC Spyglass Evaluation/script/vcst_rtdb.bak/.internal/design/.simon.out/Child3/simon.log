@@ -1,0 +1,6 @@
+
+Warning-[SM_BNP] Blocking and Non Blocking Assignments in same Process
+./../rtl/router_fifo_design.v, 65
+  Found Blocking and Non Blocking Assignments for signals <mem> in the same 
+  process.
+

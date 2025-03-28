@@ -1,0 +1,70 @@
+<SVI>
+<SVI_SIMON>
+  <option data="full_hier"/>
+  <option data="vcstaticStabilityMode=1"/>
+  <option data="circWriteFile=/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/Router1x3.scm"/>
+  <option data="outputWorkDir=/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design"/>
+  <option data="vsiLogDir=/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/logs"/>
+  <option data="noRemoveConstants"/>
+  <option data="2valued"/>
+  <option data="preserveSigs"/>
+  <option data="trackLocations"/>
+  <option data="oneDeep"/>
+  <option data="nxgAutoGlassBox"/>
+  <option data="wholeSignalsInSupport"/>
+  <option data="directIfFull"/>
+  <option data="designAttribute"/>
+  <option data="exitPostAnalysis"/>
+  <option data="timingArcFunction"/>
+  <option data="deleteSva"/>
+  <option data="useOrigVhdlGenBracket"/>
+  <option data="useOrigVhdlCase"/>
+  <option data="highLevelForm=0"/>
+  <option data="ndmerge"/>
+  <option data="keepNdMerge"/>
+  <option data="enablePortConnectAttr"/>
+  <option data="usePinSourceLocation"/>
+  <option data="treatInitialBlockAsNonSynth=0"/>
+  <option data="top=Router1x3"/>
+  <option data="addInputResolution"/>
+  <option data="disableAEPs"/>
+  <option data="dumpVsiLib"/>
+  <option data="q"/>
+  <option data="link_library="/>
+  <option data="search_path=./"/>
+  <option data="buildTop=1"/>
+  <option data="j=8"/>
+  <option data="alwaysGenLogicForPartialCombCell"/>
+  <option data="trackLocationForResetCond"/>
+  <option data="inferSimpleSyncControls"/>
+  <option data="ifLevelForCtrlInference=1"/>
+  <option data="sgCompat"/>
+  <option data="useOrigVhdlCase"/>
+  <option data="extractHolds"/>
+  <option data="readFullCase"/>
+  <option data="newParallelCase"/>
+  <option data="useNegativeSpaceForRegs=0"/>
+  <option data="loopCountLimit=2048"/>
+  <option data="createIdenticalDrivers"/>
+  <option data="noRemoveWriteOnlyLocalsInUnnamedBlocks"/>
+  <option data="markRawSigs"/>
+  <option data="case2Valued"/>
+  <option data="memLatchLimit=16"/>
+  <option data="doControlIdentify=1"/>
+  <option data="numWallSeconds=3000"/>
+  <option data="ignoreCoverage"/>
+  <option data="removeTemporaryFlops"/>
+  <option data="fastScmRead"/>
+  <option data="loadBasicDbViews"/>
+  <option data="inferSyncForConstFlop=0"/>
+</SVI_SIMON>
+<SVI_VCS>
+  <option data="hsc=/"/>
+  <option data="elab_summary_report_max_inst=5"/>
+  <option data="top=Router1x3"/>
+  <option data="portCoercionsLog=/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/port_coercions.rpt"/>
+</SVI_VCS>
+<SVI_VIFTRANS>
+  <option data="blv_chkHDLLib"/>
+</SVI_VIFTRANS>
+</SVI>

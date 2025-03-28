@@ -1,0 +1,77 @@
+<violations>
+<violation rulename="CMD_incdir03" policy="SpyGlass" lang="Mixed" message_label="DEFAULT" severity="Warning" type="normal" msgHelp="Incdir specification &apos;&#37;1+&#37;2&apos; ignored as no Verilog design/library file is specified">
+  <arg type="file" name="file" sgField="file" format="string">N.A.</arg>
+  <arg type="line" name="line" sgField="line" format="integer">0</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">empty</arg>
+  <arg pos="1" type="" format="string" name="" sgField="Message">+incdir</arg>
+  <arg pos="2" type="" format="string" name="" sgField="Message">./</arg>
+</violation>
+<violation rulename="VCSRunSummary" policy="SpyGlass" lang="Mixed" message_label="DEFAULT" severity="Info" type="normal" msgHelp="Please refer file &apos;&#37;s&apos; for summary of VCS messages">
+  <arg type="file" name="file" sgField="file" format="string">/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/VC_GOAL0/spyglass_reports/vcs_run_summary.rpt</arg>
+  <arg type="line" name="line" sgField="line" format="integer">0</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">empty</arg>
+  <arg pos="1" type="" format="string" name="" sgField="Message">/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/VC_GOAL0/spyglass_reports/vcs_run_summary.rpt</arg>
+</violation>
+<violation rulename="ElabSummary" policy="SpyGlass" lang="Mixed" message_label="DEFAULT" severity="Info" type="normal" msgHelp="Please refer file &apos;&#37;s&apos; for elab summary report">
+  <arg type="file" name="file" sgField="file" format="string">/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/VC_GOAL0/spyglass_reports/SpyGlass/elab_summary.rpt</arg>
+  <arg type="line" name="line" sgField="line" format="integer">0</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">empty</arg>
+  <arg pos="1" type="" format="string" name="" sgField="Message">/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/VC_GOAL0/spyglass_reports/SpyGlass/elab_summary.rpt</arg>
+</violation>
+<violation rulename="DetectTopDesignUnits" policy="SpyGlass" lang="Mixed" message_label="DEFAULT" severity="Info" type="normal" msgHelp="&#37;1 &#37;2 is a top level design unit">
+  <arg type="file" name="file" sgField="file" format="string">./../rtl/Router1x3.v</arg>
+  <arg type="line" name="line" sgField="line" format="integer">1</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">Router1x3</arg>
+  <arg pos="1" type="" format="string" name="" sgField="Message">Module</arg>
+  <arg pos="2" type="" format="string" name="" sgField="Message">Router1x3</arg>
+</violation>
+<violation rulename="W528" policy="lint" lang="Verilog" message_label="veCheckUsage_Viol_Msg" severity="Warning" type="normal" msgHelp="Variable &apos;&#37;1&apos;&#37;3 set but not read.[Hierarchy: &apos;&#37;2&apos;]">
+  <arg type="file" name="file" sgField="file" format="string">./../rtl/router_fifo_design.v</arg>
+  <arg type="line" name="line" sgField="line" format="integer">24</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">router_fifo_design</arg>
+  <arg pos="1" type="SG_STRING" format="string" name="VARIABLE_NAME" sgField="VARIABLE_NAME">lfd_state_s</arg>
+  <arg pos="2" type="SG_STRING" format="string" name="HIERARCHY" sgField="HIERARCHY">:Router1x3:FIFO_0@router_fifo_design</arg>
+  <arg pos="3" type="SG_STRING" format="string" name="HDL_EXPR_SIZE" sgField="HDL_EXPR_SIZE"></arg>
+</violation>
+<violation rulename="W528" policy="lint" lang="Verilog" message_label="veCheckUsage_Viol_Msg" severity="Warning" type="normal" msgHelp="Variable &apos;&#37;1&apos;&#37;3 set but not read.[Hierarchy: &apos;&#37;2&apos;]">
+  <arg type="file" name="file" sgField="file" format="string">./../rtl/router_fsm.v</arg>
+  <arg type="line" name="line" sgField="line" format="integer">104</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">router_fsm</arg>
+  <arg pos="1" type="SG_STRING" format="string" name="VARIABLE_NAME" sgField="VARIABLE_NAME">full_stage</arg>
+  <arg pos="2" type="SG_STRING" format="string" name="HIERARCHY" sgField="HIERARCHY">:Router1x3:FSM@router_fsm</arg>
+  <arg pos="3" type="SG_STRING" format="string" name="HDL_EXPR_SIZE" sgField="HDL_EXPR_SIZE"></arg>
+</violation>
+<violation rulename="STARC05-2.11.3.1" policy="starc2005" lang="Verilog" message_label="STARC-2.11.3.1_ve" severity="Reference" type="normal" msgHelp="Combinational and sequential parts of an FSM &apos;&#37;1.&#37;2&apos; described in same always block">
+  <arg type="file" name="file" sgField="file" format="string">./../rtl/router_synchronizer.v</arg>
+  <arg type="line" name="line" sgField="line" format="integer">81</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">router_synchronizer</arg>
+  <arg pos="1" type="SG_STRING" format="string" name="MODULE_NAME_RTL" sgField="MODULE_NAME_RTL">router_synchronizer</arg>
+  <arg pos="2" type="SG_STRING" format="string" name="SIGNAL" sgField="SIGNAL">fifo_0_counter_sft</arg>
+</violation>
+<violation rulename="STARC05-2.11.3.1" policy="starc2005" lang="Verilog" message_label="STARC-2.11.3.1_ve" severity="Reference" type="normal" msgHelp="Combinational and sequential parts of an FSM &apos;&#37;1.&#37;2&apos; described in same always block">
+  <arg type="file" name="file" sgField="file" format="string">./../rtl/router_synchronizer.v</arg>
+  <arg type="line" name="line" sgField="line" format="integer">108</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">router_synchronizer</arg>
+  <arg pos="1" type="SG_STRING" format="string" name="MODULE_NAME_RTL" sgField="MODULE_NAME_RTL">router_synchronizer</arg>
+  <arg pos="2" type="SG_STRING" format="string" name="SIGNAL" sgField="SIGNAL">fifo_1_counter_sft</arg>
+</violation>
+<violation rulename="STARC05-2.11.3.1" policy="starc2005" lang="Verilog" message_label="STARC-2.11.3.1_ve" severity="Reference" type="normal" msgHelp="Combinational and sequential parts of an FSM &apos;&#37;1.&#37;2&apos; described in same always block">
+  <arg type="file" name="file" sgField="file" format="string">./../rtl/router_synchronizer.v</arg>
+  <arg type="line" name="line" sgField="line" format="integer">135</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">router_synchronizer</arg>
+  <arg pos="1" type="SG_STRING" format="string" name="MODULE_NAME_RTL" sgField="MODULE_NAME_RTL">router_synchronizer</arg>
+  <arg pos="2" type="SG_STRING" format="string" name="SIGNAL" sgField="SIGNAL">fifo_2_counter_sft</arg>
+</violation>
+<violation rulename="W240" policy="lint" lang="Verilog" message_label="veCheckUsage_Viol_Msg" severity="Warning" type="normal" msgHelp="Input &apos;&#37;1&apos; declared but not read.[Hierarchy: &apos;&#37;2&apos;]">
+  <arg type="file" name="file" sgField="file" format="string">./../rtl/router_register.v</arg>
+  <arg type="line" name="line" sgField="line" format="integer">11</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">router_register</arg>
+  <arg pos="1" type="SG_STRING" format="string" name="SIGNAL" sgField="SIGNAL">full_state</arg>
+  <arg pos="2" type="SG_STRING" format="string" name="HIERARCHY" sgField="HIERARCHY">:Router1x3:REGISTER@router_register</arg>
+</violation>
+<violation rulename="ReportPortInfo-ML" policy="morelint" lang="Mixed" message_label="DEFAULT" severity="Info" type="normal" msgHelp="Port Information for top design unit has been generated. For details see report ReportPortInfo.rpt">
+  <arg type="file" name="file" sgField="file" format="string">/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/VC_GOAL0/spyglass_reports/morelint/ReportPortInfo</arg>
+  <arg type="line" name="line" sgField="line" format="integer">1</arg>
+  <arg type="MODULE" name="MODULE" sgField="MODULE" format="string">empty</arg>
+</violation>
+</violations>

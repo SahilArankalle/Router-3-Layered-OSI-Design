@@ -1,0 +1,122 @@
+
+                                   VC Static 
+
+                 Version T-2022.06 for linux64 - May 30, 2022 
+
+                    Copyright (c) 2010 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+restore_session -level default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MasterSourceFile vc_lint.tcl
+#Liberty files are needed for logical and physical netlist designs
+set search_path "./"
+set link_library " "
+set_app_var enable_lint true
+configure_lint_setup -goal lint_rtl
+analyze -verbose -format verilog "../rtl/Router1x3.v ../rtl/router_fifo_design.v ../rtl/router_fsm.v ../rtl/router_register.v ../rtl/router_synchronizer.v"
+[Info] DB_COPT044: Calling VCS: '$VCS_HOME/bin/vlogan  -kdb=common_elab /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/undef_vcs.v -Xvd_opts=-silent,+disable_message+C00373,-ssy,-ssv,-ssz -file /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/analyzeCmd1 -Xufe=parallel:incrdump  -full64 '.
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Sat Mar 22 12:23:56 2025
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/undef_vcs.v'
+Parsing design file './../rtl/Router1x3.v'
+Parsing design file './../rtl/router_fifo_design.v'
+Parsing design file './../rtl/router_fsm.v'
+Parsing design file './../rtl/router_register.v'
+Parsing design file './../rtl/router_synchronizer.v'
+CPU time: .098 seconds to compile
+elaborate Router1x3
+Doing common elaboration 
+Final timescale is '1ps/1ps'
+Info: Invoking Simon...
+Importing Symbol Libraries...
+Info: Simon VCS Start
+
+Warning-[SM_BNP] Blocking and Non Blocking Assignments in same Process
+./../rtl/router_fifo_design.v, 65
+  Found Blocking and Non Blocking Assignments for signals <mem> in the same 
+  process.
+
+=======================================================
+VCS CPU Time(s)     :0.09
+SIMON CPU Time(s)   :0.07
+SIMON Total Time(s) :0.03
+Peak Memory(MB)     :389
+=======================================================
+Info: Simon VCS Finished
+Info: Simon call complete 
+Info: Exiting after Simon Analysis 
+[Info] Loading Lint Language Checker starting
+
+Warning-[DB_CANT_LOAD] Invalid library file specified.
+  Invalid link library file specified. Cannot load link library './/'
+
+[Info] Loading Lint Language Checker Finished 
+  Failed to import the "default_u" library because the library files cannot be found in the library paths.
+---Any error or warning message, please refer to /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/verdi/elabcomLog/libCompiler.log---
+
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)
+# Gate Counts 
+Number of Flat Instances = 1712
+Number of Operator = 1712
+Number of Libcells = 0
+Number of Black-Box Instances = 0
+
+check_lint
+[Info] Running goal lint_rtl
+Inferring all potential clocks
+Inferring all potential resets
+eval {;}
+waive_lint -tag "STARC05-2.5.1.2" -add router
+report_lint -verbose -file report_lint_router.txt
+
+exit
+=======================================================
+Total Time(S)  :20.70
+CPU Time(S)    :14.16
+Peak Memory(MB):2640
+=======================================================

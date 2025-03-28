@@ -1,0 +1,287 @@
+
+  -----------------------------------------------------------------------------
+  Report Summary
+  -----------------------------------------------------------------------------
+  Product Info
+    Name    : VC Static Master Shell
+    Version : T-2022.06 -- May 30, 2022
+
+  Report Info
+    Created : Mar 28, 2025  14:02:16
+
+    TopLevelModule: Router1x3
+
+  -----------------------------------------------------------------------------
+  Management Summary
+  -----------------------------------------------------------------------------
+  Stage             Family      Fatals    Errors  Warnings     Infos    Waived
+  -----             --------  --------  --------  --------  --------  --------
+  LANGUAGE_CHECK    CODING           0         0         7         1         0
+  STRUCTURAL_CHECK  CODING           0         0         0        13         1
+  -----             --------  --------  --------  --------  --------  --------
+  Total                              0         0         7        14         1
+
+
+  -----------------------------------------------------------------------------
+  Tree Summary
+  -----------------------------------------------------------------------------
+  Severity  Stage             Tag                  Count      Waived
+  --------  -----             -------------------  -----  ----------
+  error     STRUCTURAL_CHECK  STARC05-2.5.1.2          0           1
+  warning   LANGUAGE_CHECK    STARC05-2.11.3.1         3           0
+  warning   LANGUAGE_CHECK    STARC05-2.5.1.7          1           0
+  warning   LANGUAGE_CHECK    W240                     1           0
+  warning   LANGUAGE_CHECK    W528                     2           0
+  info      LANGUAGE_CHECK    ReportPortInfo-ML        1           0
+  info      STRUCTURAL_CHECK  RegInputOutput-ML       13           0
+  --------  -----             -------------------  -----  ----------
+  Total                                               21           1
+
+
+
+  -----------------------------------------------------------------------------
+  STARC05-2.11.3.1  (3 warnings/0 waived)
+  -----------------------------------------------------------------------------
+  Tag           : STARC05-2.11.3.1
+  Description   : Combinational and sequential parts of an FSM '[Module_Name].[Signal]' described in same always block
+  Violation     : Lint:19
+  Goal          : lint_rtl
+  Module        : router_synchronizer
+  FileName      : ./../rtl/router_synchronizer.v
+  LineNumber    : 135
+  Statement     :                 if (fifo_2_counter_sft == 5'b11110)  
+  Module_Name   : router_synchronizer
+  Signal        : fifo_2_counter_sft
+  -----------------------------------------------------------------------------
+  Tag           : STARC05-2.11.3.1
+  Description   : Combinational and sequential parts of an FSM '[Module_Name].[Signal]' described in same always block
+  Violation     : Lint:17
+  Goal          : lint_rtl
+  Module        : router_synchronizer
+  FileName      : ./../rtl/router_synchronizer.v
+  LineNumber    : 81
+  Statement     :                 if (fifo_0_counter_sft == 5'b11110)  
+  Module_Name   : router_synchronizer
+  Signal        : fifo_0_counter_sft
+  -----------------------------------------------------------------------------
+  Tag           : STARC05-2.11.3.1
+  Description   : Combinational and sequential parts of an FSM '[Module_Name].[Signal]' described in same always block
+  Violation     : Lint:18
+  Goal          : lint_rtl
+  Module        : router_synchronizer
+  FileName      : ./../rtl/router_synchronizer.v
+  LineNumber    : 108
+  Statement     :                 if (fifo_1_counter_sft == 5'b11110)  
+  Module_Name   : router_synchronizer
+  Signal        : fifo_1_counter_sft
+
+  -----------------------------------------------------------------------------
+  STARC05-2.5.1.7  (1 warning/0 waived)
+  -----------------------------------------------------------------------------
+  Tag          : STARC05-2.5.1.7
+  Description  : Tri State output '[Signal]' bit(s) used in the conditional expression of if statement
+  Violation    : Lint:22
+  Goal         : lint_rtl
+  Module       : router_fifo_design
+  FileName     : ./../rtl/router_fifo_design.v
+  LineNumber   : 56
+  Statement    :   else if(count == 0 && data_out != 0) 
+  Signal       : data_out
+
+  -----------------------------------------------------------------------------
+  W240  (1 warning/0 waived)
+  -----------------------------------------------------------------------------
+  Tag           : W240
+  Description   : Input '[Signal]' declared but not read.[Hierarchy: '[HIERARCHY]']
+  Violation     : Lint:20
+  Goal          : lint_rtl
+  Module        : router_register
+  FileName      : ./../rtl/router_register.v
+  LineNumber    : 11
+  Statement     : input full_state, 
+  Signal        : full_state
+  HIERARCHY     : :Router1x3:REGISTER@router_register
+
+  -----------------------------------------------------------------------------
+  W528  (2 warnings/0 waived)
+  -----------------------------------------------------------------------------
+  Tag           : W528
+  Description   : Variable '[VariableName]'[ExprSize] set but not read.[Hierarchy: '[HIERARCHY]']
+  Violation     : Lint:16
+  Goal          : lint_rtl
+  Module        : router_fsm
+  FileName      : ./../rtl/router_fsm.v
+  LineNumber    : 104
+  Statement     : assign full_stage = (present_state == FIFO_FULL_STATE) ? 1 : 0; 
+  VariableName  : full_stage
+  ExprSize      : 
+  HIERARCHY     : :Router1x3:FSM@router_fsm
+  -----------------------------------------------------------------------------
+  Tag           : W528
+  Description   : Variable '[VariableName]'[ExprSize] set but not read.[Hierarchy: '[HIERARCHY]']
+  Violation     : Lint:15
+  Goal          : lint_rtl
+  Module        : router_fifo_design
+  FileName      : ./../rtl/router_fifo_design.v
+  LineNumber    : 24
+  Statement     :       lfd_state_s <= 0; 
+  VariableName  : lfd_state_s
+  ExprSize      : 
+  HIERARCHY     : :Router1x3:FIFO_0@router_fifo_design
+
+  -----------------------------------------------------------------------------
+  RegInputOutput-ML  (13 infos/0 waived)
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:12
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 14
+  Statement           : output [7:0] data_out_0, data_out_1, data_out_2 
+  Signal              : data_out_2[7:0]
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:9
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 11
+  Statement           : output vld_out_2, 
+  Signal              : vld_out_2
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:3
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 4
+  Statement           : input read_enb_0, 
+  Signal              : read_enb_0
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:6
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 7
+  Statement           : input pkt_valid, 
+  Signal              : pkt_valid
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:2
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 3
+  Statement           : input resetn, 
+  Signal              : resetn
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:8
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 10
+  Statement           : output vld_out_1, 
+  Signal              : vld_out_1
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:7
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 9
+  Statement           : output vld_out_0, 
+  Signal              : vld_out_0
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:14
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 14
+  Statement           : output [7:0] data_out_0, data_out_1, data_out_2 
+  Signal              : data_out_1[7:0]
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:4
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 5
+  Statement           : input read_enb_1, 
+  Signal              : read_enb_1
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:11
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 8
+  Statement           : input [7:0] data_in, 
+  Signal              : data_in[7:0]
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:10
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 13
+  Statement           : output busy, 
+  Signal              : busy
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:5
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 6
+  Statement           : input read_enb_2, 
+  Signal              : read_enb_2
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:13
+  Goal                : lint_rtl
+  FileName            : ./../rtl/Router1x3.v
+  LineNumber          : 14
+  Statement           : output [7:0] data_out_0, data_out_1, data_out_2 
+  Signal              : data_out_0[7:0]
+  Module              : Router1x3
+  DesignObjHierarchy  : Router1x3
+
+  -----------------------------------------------------------------------------
+  ReportPortInfo-ML  (1 info/0 waived)
+  -----------------------------------------------------------------------------
+  Tag           : ReportPortInfo-ML
+  Description   : Port Information for top design unit has been generated. For details see report ReportPortInfo.rpt
+  Violation     : Lint:21
+  Goal          : lint_rtl
+  FileName      : /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass/vc_lint0/Router1x3/VC_GOAL0/spyglass_reports/morelint/ReportPortInfo
+  LineNumber    : 1
+  Statement     : #     Comment          : Report Top Level Module Port Info

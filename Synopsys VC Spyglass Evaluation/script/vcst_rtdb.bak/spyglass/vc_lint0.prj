@@ -1,0 +1,35 @@
+#### Hard code options ####
+set_option run_pre_synth_rules_only yes 
+set_option perflog yes 
+set_option disable_sgom_db yes
+set_option noreport yes
+set_option disable_html_report {html datasheet dashboard}
+set_option ignore_pgpin true
+set_option enable_save_restore no 
+set_option projectwdir /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass
+set_option language_mode mixed 
+set_option allow_module_override yes 
+set_option top Router1x3
+set_option enable_detailed_hierarchy yes
+set_option prefer_tech_lib yes
+set_option disable_internal_waivers_gen yes
+set_option active_methodology /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/spyglass
+set_option use_vcs_compile yes 
+set_option existing_vir_dump_path /home1/WBRN23/SSArankalle/VLSI_RN/Verilog_labs/Router_Lint/script/vcst_rtdb/.internal/design/
+set_option lib dware  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dware/lib
+set_option lib gtech  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/gtech/lib
+set_option lib dw01  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw01/lib
+set_option lib dw02  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw02/lib
+set_option lib dw03  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw03/lib
+set_option lib dw04  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw04/lib
+set_option lib dw05  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw05/lib
+set_option lib dw06  /home/cad/eda/SYNOPSYS/VC_SPYGLASS_2022/vc_static/T-2022.06/packages/DW/linux64/packages/dw/dw06/lib
+#### Options from Tcl2Prj Converter starts ####
+set_option check_celldefine yes
+set_option allow_celldefine_as_top yes
+set_option enable_generate_label_naming yes
+#### Options from Tcl2Prj Converter ends ####
+
+set_option allow_non_lrm yes
+set_option incdir " ./"
+

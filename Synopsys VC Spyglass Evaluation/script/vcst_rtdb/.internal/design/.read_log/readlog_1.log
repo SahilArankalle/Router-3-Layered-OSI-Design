@@ -1,0 +1,6 @@
+BEGIN_VIOLATION
+RULE_NAME:DB_CANT_LOAD
+VCS_SEVERITY:Warning
+MESSAGE:  Invalid link library file specified. Cannot load link library &apos;.//&apos;
+END_VIOLATION
+

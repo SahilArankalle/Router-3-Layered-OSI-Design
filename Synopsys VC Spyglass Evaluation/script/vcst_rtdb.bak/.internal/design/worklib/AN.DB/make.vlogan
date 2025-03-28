@@ -1,0 +1,32 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -kdb=common_elab +v2k +incdir+./ -skip_translate_body +define+SYNTHESIS -full64 -full64
+
+all :		_VCSgd_6mHV2c_1.db \
+	_VCSgd_3EoR4c_1.db \
+	_VCSgd_HMEEAe_1.db \
+	_VCSgd_KZ65yb_1.db \
+	_VCSgd_BPsd3d_1.db \
+
+
+
+_VCSgd_6mHV2c_1.db :	./../rtl/Router1x3.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/Router1x3.v
+
+
+_VCSgd_3EoR4c_1.db :	./../rtl/router_fifo_design.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/router_fifo_design.v
+
+
+_VCSgd_HMEEAe_1.db :	./../rtl/router_fsm.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/router_fsm.v
+
+
+_VCSgd_KZ65yb_1.db :	./../rtl/router_register.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/router_register.v
+
+
+_VCSgd_BPsd3d_1.db :	./../rtl/router_synchronizer.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/router_synchronizer.v
+
+

@@ -1,0 +1,19 @@
+module Router1x3 (
+input clk,
+input resetn,
+input read_enb_0,
+input read_enb_1,
+input read_enb_2,
+input pkt_valid,
+input [7:0] data_in,
+output valid_out_0,
+output valid_out_1,
+output valid_out_2,
+output error,
+output busy,
+output [7:0] data_out_0, data_out_1, data_out_2
+);
+
+wire [2:0] write_enb;
+wire [7:0] dout;
+
